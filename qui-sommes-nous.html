@@ -134,17 +134,15 @@
     .qhero-copy{position:relative;z-index:2;max-width:46ch}
     .qhero-copy .eyebrow{opacity:0;transform:translateY(12px);animation:heroIn .7s cubic-bezier(.2,.8,.2,1) .05s forwards}
     /* titre : mêmes police & tailles que les titres de l'accueil (Cormorant Garamond) */
-    .qhero h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(2.3rem,5.1vw,4.1rem);line-height:1.05;letter-spacing:.004em;color:var(--green-800)}
-    .qhero h1 .hl-a,.qhero h1 .hl-mid{display:block;opacity:0;transform:translateY(14px);animation:heroIn .8s cubic-bezier(.2,.8,.2,1) forwards}
-    .qhero h1 .hl-a{animation-delay:.26s}
-    .qhero h1 .hl-mid{position:relative;animation-delay:.38s}
-    .qhero h1 .hl-core{white-space:nowrap}
-    .qhero h1 .ell{color:var(--gold-ink);animation:ellPulse 7s ease-in-out 1.7s infinite}
-    @keyframes ellPulse{0%,8%{opacity:.45}14%,52%{opacity:0}60%,100%{opacity:.45}}
-    .qhero h1 .hl-b{display:inline-block;margin-left:.24em;font-style:italic;color:var(--gold-ink);white-space:nowrap;will-change:opacity,transform;animation:jeuCycle 7s ease-in-out 1.7s infinite}
-    @keyframes jeuCycle{0%,5%{opacity:0;transform:translateY(.18em)}13%{opacity:1;transform:none}48%{opacity:1;transform:none}57%{opacity:0;transform:translateY(.1em)}100%{opacity:0;transform:translateY(.18em)}}
-    .qhero h1 em{font-style:italic;color:var(--gold-ink);position:relative}
-    .qhero h1 .hl-b em::after{content:"";position:absolute;left:0;right:0;bottom:.01em;height:.06em;border-radius:3px;background:linear-gradient(90deg,var(--gold-500),var(--gold-ink))}
+    .qhero h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(2.3rem,5.1vw,4.1rem);line-height:1.06;letter-spacing:.004em;color:var(--green-800)}
+    .qhero h1 .hl-a,.qhero h1 .hl-mid,.qhero h1 .hl-c{display:block;opacity:0;transform:translateY(14px);animation:heroIn .8s cubic-bezier(.2,.8,.2,1) forwards}
+    .qhero h1 .hl-a{animation-delay:.24s;white-space:nowrap}
+    .qhero h1 .hl-mid{position:relative;animation-delay:.36s}
+    .qhero h1 .hl-c{animation-delay:.48s}
+    .qhero h1 .hl-key{position:relative;display:inline-block;font-style:italic;color:var(--gold-ink);white-space:nowrap}
+    .qhero h1 .hl-key::after{content:"";position:absolute;left:.02em;right:.02em;bottom:.02em;height:.06em;border-radius:3px;background:linear-gradient(90deg,var(--gold-500),var(--gold-ink));transform:scaleX(0);transform-origin:left;animation:keyUL .9s cubic-bezier(.5,0,.2,1) 1.15s forwards}
+    @keyframes keyUL{to{transform:scaleX(1)}}
+    .qhero h1 .nb{white-space:nowrap}
     .qhero-sub{margin-top:1.3rem;max-width:42ch;font-size:clamp(1.04rem,1rem + .38vw,1.18rem);line-height:1.6;color:var(--muted);opacity:0;transform:translateY(12px);animation:heroIn .7s cubic-bezier(.2,.8,.2,1) .56s forwards}
     .qhero-sub strong{color:var(--green-700);font-weight:600}
     @keyframes heroIn{to{opacity:1;transform:none}}
@@ -366,8 +364,8 @@
       .js .map-pin .pin-mark{transform:none}
       .js .map-thread{stroke-dashoffset:0}
       .js .reveal{opacity:1;transform:none}
-      .qhero .eyebrow,.qhero h1 .hl-a,.qhero h1 .hl-mid,.qhero-sub,.qhero-media,.qm-badge{opacity:1;transform:none}
-      .qhero h1 .hl-b,.qhero h1 .ell{opacity:1;transform:none}
+      .qhero .eyebrow,.qhero h1 .hl-a,.qhero h1 .hl-mid,.qhero h1 .hl-c,.qhero-sub,.qhero-media,.qm-badge{opacity:1;transform:none}
+      .qhero h1 .hl-key::after{transform:scaleX(1)}
       .js .val-card{opacity:1;transform:none}
       .adn-beam{display:none}
       .js .frise .fstep{opacity:1;transform:none}
@@ -425,7 +423,7 @@
       <div class="container qhero-inner">
         <div class="qhero-copy">
           <p class="eyebrow">Qui sommes-nous</p>
-          <h1 id="q-h1"><span class="hl-a">On prend la</span><span class="hl-mid"><span class="hl-core">cohésion au sérieux<span class="ell" aria-hidden="true">…</span></span><span class="hl-b">et au <em>jeu</em></span></span></h1>
+          <h1 id="q-h1"><span class="hl-a">Votre agence de</span><span class="hl-mid"><span class="hl-key">team building</span></span><span class="hl-c">au Maroc, <span class="nb">depuis 20 ans</span></span></h1>
           <p class="qhero-sub">Tout est conçu, organisé et animé par nos soins. Pas de sous-traitance&nbsp;: vos collaborateurs arrivent en groupe et repartent en <strong>équipe</strong>.</p>
         </div>
 
