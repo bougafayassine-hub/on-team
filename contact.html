@@ -347,6 +347,8 @@
     .footer-credit:hover .yn::after{transform:scaleX(1)}
     .footer-credit .arrow{font-size:.78rem;transition:transform .25s}
     .footer-credit:hover .arrow{transform:translateX(3px)}
+    .footer-credit .yn-anim{background:linear-gradient(100deg,var(--gold-400) 18%,#FFF1CF 42%,var(--gold-ink) 64%,var(--gold-400) 88%);background-size:230% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:ynShine 3.4s linear infinite}
+    @keyframes ynShine{0%{background-position:0 0}100%{background-position:-230% 0}}
 
     /* ===================== RESPONSIVE ===================== */
     @media (max-width:980px){
@@ -597,6 +599,11 @@
               </select>
             </div>
 
+            <div class="ct-field full ct-other" id="ct-ville-other" hidden>
+              <label for="f-ville-autre">Précisez votre ville <span class="req">*</span></label>
+              <input id="f-ville-autre" name="ville_autre" type="text" placeholder="Nom de votre ville">
+            </div>
+
             <div class="ct-sep">Votre projet</div>
 
             <div class="ct-row">
@@ -689,7 +696,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 ON TEAM Evolution — Tous droits réservés</span>
-        <a class="footer-credit" href="https://yn-growth.netlify.app/" target="_blank" rel="noopener">Site réalisé par <span class="yn">Y&amp;N Growth Agency</span><span class="arrow" aria-hidden="true">→</span></a>
+        <a class="footer-credit" href="https://yngrowth.com" target="_blank" rel="noopener" aria-label="Y&amp;N Growth"><span class="yn yn-anim">Y&amp;N Growth</span><span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </footer>
@@ -706,6 +713,20 @@
       /* Histoire : on attend que l'ensemble de la section soit bien visible avant de lancer la frise */
       var ioHisto = new IntersectionObserver(function(e){ onIn(ioHisto)(e); }, {threshold:.3, rootMargin:'0px 0px -12% 0px'});
       document.querySelectorAll('.histo').forEach(function(el){ ioHisto.observe(el); });
+    })();
+    /* Contact : champ « ville » personnalisé quand on choisit « Autre ville » */
+    (function(){
+      var sel=document.getElementById('f-ville'),
+          box=document.getElementById('ct-ville-other'),
+          inp=document.getElementById('f-ville-autre');
+      if(!sel||!box) return;
+      function sync(){
+        var other=sel.value==='Autre ville';
+        box.hidden=!other;
+        if(inp){ inp.required=other; if(!other) inp.value=''; }
+      }
+      sel.addEventListener('change',sync);
+      sync();
     })();
   </script>
 </body>
