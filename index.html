@@ -171,7 +171,8 @@
     @keyframes flashBurst{0%{opacity:0;transform:translate(-50%,-50%) scale(0)}14%{opacity:1}42%{opacity:.9;transform:translate(-50%,-50%) scale(9)}100%{opacity:0;transform:translate(-50%,-50%) scale(15)}}
     @keyframes weldShake{0%{transform:translateX(0)}22%{transform:translateX(-5px)}44%{transform:translateX(5px)}64%{transform:translateX(-3px)}82%{transform:translateX(2px)}100%{transform:translateX(0)}}
     .hero-lede-sub{margin-top:1rem;font-family:var(--font-body);font-weight:500;font-size:clamp(1.06rem,1rem + .4vw,1.24rem);line-height:1.55;letter-spacing:.004em;color:rgba(247,244,237,.93);text-shadow:0 1px 16px rgba(0,0,0,.38);max-width:54ch;margin-inline:auto}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.7rem}
+.hero-actions .btn{padding:.78rem 1.45rem;font-size:.9rem}
     .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 
     /* HERO 1 — texte gauche, photo droite, dégradé retravaillé */
@@ -296,22 +297,22 @@
     }
 
     /* ===== CHIFFRES CLÉS — fond clair, épuré / corporate ===== */
-    .kpi{--gold-ink:#B07D2E;position:relative;overflow:hidden;background:var(--cream);padding-block:clamp(1.5rem,2.6vw,2.1rem)}
+    .kpi{--gold-ink:#B07D2E;position:relative;overflow:hidden;background:linear-gradient(160deg,#0C2419,var(--green-900));color:var(--cream);padding-block:clamp(1.1rem,2vw,1.6rem)}
     .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-ink) 24%,var(--gold-ink) 76%,transparent);opacity:.55}
     .kpi-inner{position:relative;z-index:1}
-    .kpi-eyebrow{display:flex;align-items:center;justify-content:center;gap:.9rem;font-family:var(--font-body);font-weight:600;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--green-700);margin:0 0 clamp(.95rem,1.9vw,1.35rem)}
+    .kpi-eyebrow{display:flex;align-items:center;justify-content:center;gap:.9rem;font-family:var(--font-body);font-weight:600;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-400);margin:0 0 clamp(.7rem,1.5vw,1rem)}
     .kpi-eyebrow::before,.kpi-eyebrow::after{content:"";height:1px;width:clamp(26px,7vw,64px)}
     .kpi-eyebrow::before{background:linear-gradient(90deg,transparent,var(--gold-ink))}
     .kpi-eyebrow::after{background:linear-gradient(90deg,var(--gold-ink),transparent)}
     .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);align-items:center}
     .kpi-item{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding-inline:clamp(.6rem,2vw,1.6rem)}
     .kpi-item + .kpi-item::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);height:64%;width:1px;background:linear-gradient(180deg,transparent,rgba(20,53,36,.14) 18%,rgba(20,53,36,.14) 82%,transparent)}
-    .kpi-num{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:clamp(2.9rem,2vw + 2.5rem,4.6rem);line-height:.9;letter-spacing:-.022em;color:var(--green-800);font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1,"lnum" 1;display:inline-flex;align-items:flex-start;justify-content:center}
+    .kpi-num{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:clamp(2.2rem,1.4vw + 2rem,3.3rem);line-height:.9;letter-spacing:-.022em;color:var(--cream);font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1,"lnum" 1;display:inline-flex;align-items:flex-start;justify-content:center}
     .kpi-num .pl{color:var(--gold-ink);font-size:.6em;font-weight:800;line-height:1;margin-right:.05em;transform:translateY(.16em);-webkit-text-stroke:.6px var(--gold-ink)}
     .kpi-num .k{color:var(--gold-ink);font-size:.6em;font-weight:800;line-height:1;align-self:flex-start;margin-left:.04em;transform:translateY(.16em)}
-    .kpi-bar{width:30px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--gold-500),var(--gold-ink));margin:.65rem 0 .5rem;transition:width .35s ease}
+    .kpi-bar{width:30px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--gold-400),var(--gold-ink));margin:.5rem 0 .45rem;transition:width .35s ease}
     .kpi-item:hover .kpi-bar{width:46px}
-    .kpi-label{font-family:var(--font-body);font-weight:600;font-size:clamp(.66rem,1.4vw,.74rem);letter-spacing:.14em;text-transform:uppercase;color:#4d5b51;line-height:1.4;max-width:14ch}
+    .kpi-label{font-family:var(--font-body);font-weight:600;font-size:clamp(.64rem,1.3vw,.72rem);letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,237,.72);line-height:1.4;max-width:14ch}
     @media (max-width:720px){
       .kpi-grid{grid-template-columns:repeat(2,1fr);row-gap:1.6rem}
       .kpi-item::before{display:none}
@@ -451,20 +452,20 @@
 
 
     /* ===== FOOTER (format VAKOM adapté ON TEAM) ===== */
-    .site-footer{background:linear-gradient(180deg,var(--green-900),#0A1F15);color:rgba(247,244,237,.7);padding-block:clamp(2.3rem,4vw,3.2rem) clamp(1.3rem,2.4vw,1.8rem)}
-    .footer-top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:clamp(1.8rem,4vw,3.4rem)}
-    .footer-logo{height:42px;width:auto;filter:brightness(0) invert(1);opacity:.95}
-    .footer-desc{margin-top:1.2rem;font-size:.93rem;line-height:1.6;color:rgba(247,244,237,.58);max-width:44ch}
-    .footer-contact{margin-top:1.6rem;display:flex;flex-direction:column;gap:.9rem;font-style:normal}
+    .site-footer{background:linear-gradient(180deg,var(--green-900),#0A1F15);color:rgba(247,244,237,.7);padding-block:clamp(1.7rem,2.8vw,2.3rem) clamp(.9rem,1.6vw,1.3rem)}
+    .footer-top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:clamp(1.3rem,2.7vw,2.2rem)}
+    .footer-logo{height:34px;width:auto;filter:brightness(0) invert(1);opacity:.95}
+    .footer-desc{margin-top:.8rem;font-size:.9rem;line-height:1.55;color:rgba(247,244,237,.58);max-width:44ch}
+    .footer-contact{margin-top:1.05rem;display:flex;flex-direction:column;gap:.62rem;font-style:normal}
     .footer-contact a,.footer-contact .fc-line{display:flex;align-items:center;gap:.75rem;color:rgba(247,244,237,.8);font-size:.95rem;text-decoration:none;transition:color .2s}
     .footer-contact a:hover{color:var(--gold-400)}
     .footer-contact .ico{width:20px;height:20px;flex:0 0 auto;display:grid;place-items:center;color:var(--gold-400)}
     .footer-contact .ico svg{width:18px;height:18px}
-    .footer-col h3{font-family:var(--font-body);color:var(--gold-400);font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700;margin:0 0 1.4rem}
-    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.95rem}
+    .footer-col h3{font-family:var(--font-body);color:var(--gold-400);font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700;margin:0 0 .85rem}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
     .footer-col a{color:rgba(247,244,237,.72);font-size:.95rem;text-decoration:none;transition:color .2s}
     .footer-col a:hover{color:var(--gold-400)}
-    .footer-bottom{margin-top:clamp(2.2rem,4.5vw,3.4rem);padding-top:1.4rem;border-top:1px solid rgba(247,244,237,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.7rem;font-size:.85rem;color:rgba(247,244,237,.5)}
+    .footer-bottom{margin-top:clamp(1.4rem,3vw,2rem);padding-top:1rem;border-top:1px solid rgba(247,244,237,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.7rem;font-size:.85rem;color:rgba(247,244,237,.5)}
     .footer-credit{display:inline-flex;align-items:center;gap:.4rem;color:rgba(247,244,237,.5);text-decoration:none;transition:color .25s}
     .footer-credit:hover{color:rgba(247,244,237,.82)}
     .footer-credit .yn{position:relative;color:var(--gold-400);font-weight:600}
@@ -476,6 +477,24 @@
     @keyframes ynShine{0%{background-position:0 0}100%{background-position:-230% 0}}
     @media (max-width:860px){.footer-top{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
     @media (max-width:520px){.footer-top{grid-template-columns:1fr}.footer-bottom{flex-direction:column;align-items:flex-start}}
+    /* ===================== CTA CONTACT (avant footer) ===================== */
+    .cta-band{background:var(--cream);padding-block:clamp(1.8rem,3.4vw,3rem)}
+    .cta-inner{position:relative;overflow:hidden;border-radius:24px;color:var(--cream);
+      background:radial-gradient(80% 130% at 88% -12%,rgba(214,161,86,.24),transparent 56%),linear-gradient(155deg,var(--green-800),var(--green-900));
+      padding:clamp(1.7rem,3.2vw,2.7rem) clamp(1.5rem,3.2vw,2.8rem);display:flex;align-items:center;justify-content:space-between;gap:clamp(1.4rem,3vw,2.6rem);flex-wrap:wrap;box-shadow:var(--shadow-md)}
+    .cta-copy{display:flex;align-items:center;gap:1.05rem;min-width:0}
+    .cta-ico{flex:0 0 auto;width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:rgba(242,200,121,.14);color:var(--gold-400);border:1px solid rgba(242,200,121,.3)}
+    .cta-ico svg{width:25px;height:25px}
+    .cta-copy h2{font-family:var(--font-display);font-weight:500;font-size:clamp(1.35rem,1.05rem + 1.2vw,2rem);line-height:1.1;letter-spacing:-.015em;color:var(--cream);margin:0}
+    .cta-copy h2 em{font-style:italic;color:var(--gold-400)}
+    .cta-act{display:flex;flex-direction:column;align-items:flex-start;gap:.65rem}
+    .cta-sub{font-size:.95rem;line-height:1.5;color:rgba(247,244,237,.78);max-width:34ch}
+    .cta-btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--gold-400);color:var(--green-900);font-family:var(--font-body);font-weight:700;font-size:.96rem;padding:.85rem 1.6rem;border-radius:999px;transition:transform .25s,box-shadow .25s,background .25s}
+    .cta-btn svg{width:1.05em;height:1.05em;transition:transform .25s}
+    .cta-btn:hover{background:#EFC480;transform:translateY(-2px);box-shadow:0 16px 34px -16px rgba(176,125,46,.7)}
+    .cta-btn:hover svg{transform:translateX(4px)}
+    .cta-note{font-size:.78rem;letter-spacing:.03em;color:rgba(247,244,237,.6)}
+    @media(max-width:760px){.cta-inner{flex-direction:column;align-items:flex-start}.cta-act{align-items:flex-start}}
   </style>
 </head>
 <body>
@@ -488,7 +507,6 @@
       <a href="/" class="active">Accueil</a>
       <a href="/qui-sommes-nous.html">Qui sommes-nous&nbsp;?</a>
       <a href="/nos-prestations.html">Nos prestations</a>
-      <a href="/galerie.html">Galerie</a>
       <a href="/contact.html">Contact</a>
     </nav>
 
@@ -505,8 +523,7 @@
         <a href="/"><span class="idx">01</span>Accueil</a>
         <a href="/qui-sommes-nous.html"><span class="idx">02</span>Qui sommes-nous&nbsp;?</a>
         <a href="/nos-prestations.html"><span class="idx">03</span>Nos prestations</a>
-        <a href="/galerie.html"><span class="idx">04</span>Galerie</a>
-        <a href="/contact.html"><span class="idx">05</span>Contact</a>
+        <a href="/contact.html"><span class="idx">04</span>Contact</a>
       </nav>
       <a class="nav-ov-cta" href="/contact.html">Demander un devis →</a>
       <div class="nav-ov-foot">
@@ -552,34 +569,6 @@
     </section>
   <!--HERO2_END-->
 
-    <!-- CHIFFRES CLÉS -->
-    <section class="kpi" aria-labelledby="kpi-title">
-      <div class="container kpi-inner">
-        <h2 class="kpi-eyebrow" id="kpi-title">L'impact en chiffres</h2>
-        <div class="kpi-grid">
-          <div class="kpi-item">
-            <span class="kpi-num" data-to="150" data-pre="+"></span>
-            <span class="kpi-bar" aria-hidden="true"></span>
-            <span class="kpi-label">Entreprises clientes</span>
-          </div>
-          <div class="kpi-item">
-            <span class="kpi-num" data-to="350" data-pre="+"></span>
-            <span class="kpi-bar" aria-hidden="true"></span>
-            <span class="kpi-label">Événements orchestrés</span>
-          </div>
-          <div class="kpi-item">
-            <span class="kpi-num" data-to="50" data-pre="+" data-suf="K"></span>
-            <span class="kpi-bar" aria-hidden="true"></span>
-            <span class="kpi-label">Participants réunis</span>
-          </div>
-          <div class="kpi-item">
-            <span class="kpi-num" data-to="25"></span>
-            <span class="kpi-bar" aria-hidden="true"></span>
-            <span class="kpi-label">Animateurs accrédités</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- NOTRE PROMESSE -->
     <section class="promise" aria-labelledby="promise-title">
@@ -607,6 +596,35 @@
           </article>
         </div>
         <p class="promise-note">Ni colonie de vacances, ni séminaire scolaire — les deux mondes réunis.</p>
+      </div>
+    </section>
+
+    <!-- CHIFFRES CLÉS -->
+    <section class="kpi" aria-labelledby="kpi-title">
+      <div class="container kpi-inner">
+        <h2 class="kpi-eyebrow" id="kpi-title">L'impact en chiffres</h2>
+        <div class="kpi-grid">
+          <div class="kpi-item">
+            <span class="kpi-num" data-to="150" data-pre="+"></span>
+            <span class="kpi-bar" aria-hidden="true"></span>
+            <span class="kpi-label">Entreprises clientes</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-num" data-to="350" data-pre="+"></span>
+            <span class="kpi-bar" aria-hidden="true"></span>
+            <span class="kpi-label">Événements orchestrés</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-num" data-to="50" data-pre="+" data-suf="K"></span>
+            <span class="kpi-bar" aria-hidden="true"></span>
+            <span class="kpi-label">Participants réunis</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-num" data-to="25"></span>
+            <span class="kpi-bar" aria-hidden="true"></span>
+            <span class="kpi-label">Animateurs accrédités</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -890,6 +908,24 @@
             </div>
             <button class="tmoni-more" type="button" aria-expanded="false" data-more="Voir les 3 autres avis">Voir les 3 autres avis</button>
           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA CONTACT -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="cta-copy">
+            <span class="cta-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <h2>Parlons de votre prochain <em>moment d'équipe</em>.</h2>
+          </div>
+          <div class="cta-act">
+            <p class="cta-sub">Un échange gratuit de 15 minutes pour cadrer vos objectifs.</p>
+            <a class="cta-btn" href="/contact.html">Contactez-nous
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <span class="cta-note">Sans engagement</span>
           </div>
         </div>
       </div>
