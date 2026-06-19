@@ -338,14 +338,14 @@
     .pb-tag{flex:0 0 auto;font-family:var(--font-body);font-weight:700;font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--gold-500),var(--gold-ink));padding:.32em .62em;border-radius:999px}
     .pb-title{font-size:.86rem;font-weight:600;color:var(--green-800)}
     .pb-title strong{color:var(--gold-ink);font-weight:700}
-    .pb-arrow{flex:0 0 auto;color:var(--gold-ink);font-weight:600;font-size:.9rem;transition:transform .25s}
-    .promise-bestseller:hover .pb-arrow{transform:translateX(3px)}
+    .pb-cta{display:inline-flex;align-items:center;gap:.32rem;font-family:var(--font-body);font-weight:700;font-size:.76rem;letter-spacing:.01em;color:var(--gold-ink)}
+    .pb-cta span{transition:transform .25s}
+    .promise-bestseller:hover .pb-cta span{transform:translateX(3px)}
     .pb-sub{font-size:.74rem;line-height:1.4;color:var(--muted)}
     .promise-card h3{font-family:var(--font-display);font-weight:500;font-size:clamp(1.2rem,1.1rem + .4vw,1.42rem);letter-spacing:-.012em;color:var(--green-800);margin-bottom:.7rem;min-height:1.3em}
     .promise-card p{color:var(--muted);font-size:1rem;line-height:1.62}
     .promise-plus{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--white);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:1.55rem;line-height:1;color:var(--gold-ink);box-shadow:0 8px 22px -10px rgba(14,38,28,.35);z-index:2;animation:plusPulse 2.4s ease-in-out infinite}
     @keyframes plusPulse{0%,100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 8px 22px -10px rgba(14,38,28,.35),0 0 0 0 rgba(176,125,46,.5)}50%{transform:translate(-50%,-50%) scale(1.09);box-shadow:0 8px 22px -10px rgba(14,38,28,.35),0 0 0 13px rgba(176,125,46,0)}}
-    .promise-note{margin-top:clamp(1rem,2vw,1.5rem);text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:clamp(1.15rem,1rem + .65vw,1.5rem);line-height:1.4;color:var(--green-700)}
     @media (max-width:720px){
       .promise-pair{grid-template-columns:1fr;gap:2.6rem}
     }
@@ -583,9 +583,10 @@
             <span class="mk" aria-hidden="true"></span>
             <h3>Le plaisir, pour de vrai</h3>
             <p>On rit, on lâche prise, on crée des souvenirs. Des activités vivantes, pensées pour reconnecter les équipes — jamais pour les mettre sous pression.</p>
-            <a class="promise-bestseller" href="/nos-prestations.html#la-tour">
-              <span class="pb-row"><span class="pb-tag">Best-seller</span><span class="pb-title">Découvrir <strong>« La Tour »</strong></span><span class="pb-arrow" aria-hidden="true">→</span></span>
-              <span class="pb-sub">Notre « Learning Games » maison qui transforme la cohésion en jeu.</span>
+            <a class="promise-bestseller" href="/contact.html?experience=team-building&amp;sujet=la-tour" aria-label="La Tour — nous contacter pour en savoir plus">
+              <span class="pb-row"><span class="pb-tag">Best-seller</span><span class="pb-title">« La Tour », notre <strong>Team building</strong> maison</span></span>
+              <span class="pb-cta">On vous en dit plus <span aria-hidden="true">→</span></span>
+              <span class="pb-sub">Un secret bien gardé. On le dévoile sur demande.</span>
             </a>
           </article>
           <span class="promise-plus" aria-hidden="true">+</span>
@@ -595,7 +596,6 @@
             <p>Chaque expérience se conclut par un débrief : dynamiques observées, forces révélées, pistes concrètes pour la suite. Du concret, pas seulement un bon souvenir.</p>
           </article>
         </div>
-        <p class="promise-note">Ni colonie de vacances, ni séminaire scolaire — les deux mondes réunis.</p>
       </div>
     </section>
 

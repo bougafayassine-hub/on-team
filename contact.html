@@ -727,6 +727,34 @@
       sel.addEventListener('change',sync);
       sync();
     })();
+    /* Contact : pré-remplissage depuis l'URL (ex. lien « La Tour » de l'accueil) */
+    (function(){
+      try{
+        var params=new URLSearchParams(window.location.search);
+        if(!params.toString()) return;
+        function norm(s){return (s||'').toString().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[-_]+/g,' ').trim();}
+        var exp=params.get('experience');
+        var sel=document.getElementById('f-type');
+        if(exp && sel){
+          var want=norm(exp);
+          for(var i=0;i<sel.options.length;i++){
+            if(norm(sel.options[i].text)===want || norm(sel.options[i].value)===want){
+              sel.selectedIndex=i;
+              sel.dispatchEvent(new Event('change',{bubbles:true}));
+              break;
+            }
+          }
+        }
+        var suj=params.get('sujet');
+        var msg=document.getElementById('f-msg');
+        if(suj && norm(suj)==='la tour' && msg && !msg.value.trim()){
+          msg.value='Bonjour,\nJe souhaite discuter de votre best-seller "La Tour".\nCordialement,';
+          var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          try{ msg.focus({preventScroll:true}); }catch(e){ msg.focus(); }
+          if(!reduce && msg.scrollIntoView){ msg.scrollIntoView({behavior:'smooth',block:'center'}); }
+        }
+      }catch(e){}
+    })();
   </script>
 </body>
 </html>
