@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <title>Contact &amp; devis — ON TEAM Evolution, agence team building à Casablanca</title>
-  <meta name="description" content="Parlons de votre prochain team building, séminaire ou coaching d'équipe. Décrivez-nous votre projet : ON TEAM Evolution vous répond sous 24h avec un devis sur-mesure, partout au Maroc.">
-  <link rel="canonical" href="https://onteam.ma/contact.html">
+  <title>Merci — votre demande est bien reçue · ON TEAM Evolution</title>
+  <meta name="description" content="Merci ! Votre demande a bien été envoyée à ON TEAM Evolution. Nous vous recontactons sous 24h ouvrées.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://onteam.ma/merci.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="ON TEAM Evolution">
@@ -467,6 +468,25 @@
     @media (max-width:520px){
       .ct-row{grid-template-columns:1fr}
     }
+    /* ===================== MERCI (confirmation) ===================== */
+    .merci{position:relative;overflow:hidden;text-align:center;background:radial-gradient(62% 72% at 50% -12%,rgba(214,161,86,.16),transparent 60%),var(--cream);min-height:calc(100svh - var(--nav-h));display:flex;align-items:center;padding-block:clamp(2.4rem,6vw,4.4rem)}
+    .merci .grain{position:absolute;inset:0;background:var(--noise);opacity:.035;mix-blend-mode:multiply;pointer-events:none}
+    .merci-inner{position:relative;max-width:60ch;margin-inline:auto}
+    .merci-badge{width:88px;height:88px;margin:0 auto 1.5rem;border-radius:50%;display:grid;place-items:center;background:linear-gradient(150deg,var(--green-700),var(--green-900));box-shadow:0 26px 52px -22px rgba(20,53,36,.6),0 0 0 10px rgba(214,161,86,.12)}
+    .merci-badge svg{width:42px;height:42px;color:var(--gold-400)}
+    .merci-badge .chk{stroke-dasharray:40;stroke-dashoffset:40;animation:chkDraw .7s .3s cubic-bezier(.6,0,.2,1) forwards}
+    @keyframes chkDraw{to{stroke-dashoffset:0}}
+    .merci h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(2.1rem,1.5rem + 2.6vw,3.4rem);line-height:1.05;letter-spacing:.004em;color:var(--green-800);margin-top:.35rem}
+    .merci h1 em{font-style:italic;color:var(--gold-ink)}
+    .merci-lede{margin:1rem auto 0;max-width:46ch;font-size:clamp(1.04rem,1rem + .4vw,1.18rem);line-height:1.6;color:var(--muted)}
+    .merci-lede strong{color:var(--green-700);font-weight:600}
+    .merci-steps{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:1.1rem 1.8rem;margin:1.8rem 0 1.9rem;padding:0}
+    .merci-steps li{display:flex;align-items:center;gap:.55rem;font-size:.92rem;font-weight:600;color:var(--green-800)}
+    .merci-steps .n{flex:0 0 auto;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:rgba(214,161,86,.16);color:var(--gold-ink);font-family:"Space Grotesk",sans-serif;font-size:.8rem}
+    .merci-actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+    .merci-contact{margin-top:1.7rem;font-size:.95rem;color:var(--muted)}
+    .merci-contact a{color:var(--gold-ink);font-weight:600}
+    @media(max-width:600px){.merci-steps{flex-direction:column;align-items:center;gap:.75rem}}
   </style>
 </head>
 <body>
@@ -511,144 +531,27 @@
   </header>
 
   <main>
-    <!-- CONTACT -->
-    <section class="contact reveal" aria-labelledby="ct-h1">
+    <section class="merci">
       <span class="grain" aria-hidden="true"></span>
-      <div class="container contact-grid">
-
-        <!-- Colonne intro -->
-        <aside class="ct-intro">
-          <p class="eyebrow">Contact · ON TEAM Casablanca</p>
-          <h1 class="ct-title" id="ct-h1">Parlons de votre prochain <em>évènement d'entreprise</em>.</h1>
-          <p class="ct-lede">Chaque équipe est unique. Décrivez-nous votre contexte et vos objectifs&nbsp;: on vous propose une expérience sur-mesure, conçue, organisée et animée par nos soins.</p>
-
-          <ul class="ct-points">
-            <li><span class="ct-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Réponse sous 24h ouvrées</li>
-            <li><span class="ct-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.6 7 22l5-3 5 3-1.2-8.4"/></svg></span>20&nbsp;ans d'expérience, zéro sous-traitance</li>
-            <li><span class="ct-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>Devis gratuit &amp; sans engagement</li>
-          </ul>
-
-          <div class="ct-contact">
-            <p class="ct-contact-h">Nous contacter</p>
-            <a href="tel:+212661586548"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>+212 661 58 65 48</a>
-            <a href="mailto:contact@onteam.ma"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>contact@onteam.ma</a>
-            <span class="ct-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Casablanca, Maroc</span>
-          </div>
-
-          <figure class="ct-quote">
-            <blockquote>On ne vend pas des activités. On crée du lien qui dure.</blockquote>
-            <figcaption>— L'équipe ON TEAM Evolution</figcaption>
-          </figure>
-        </aside>
-
-        <!-- Carte formulaire -->
-        <div class="ct-card">
-          <h2 class="ct-card-h">Obtenez votre devis</h2>
-          <p class="ct-card-sub">Remplissez ce formulaire&nbsp;: on vous recontacte pour un premier échange, sans engagement.</p>
-
-          <form class="ct-form" name="devis" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci.html">
-            <input type="hidden" name="form-name" value="devis">
-            <input type="hidden" name="subject" value="Nouvelle demande de devis — site ON TEAM Evolution">
-            <p class="ct-hp" aria-hidden="true"><label>Ne remplissez pas ce champ&nbsp;: <input tabindex="-1" autocomplete="off" name="bot-field"></label></p>
-
-            <div class="ct-row">
-              <div class="ct-field">
-                <label for="f-prenom">Prénom <span class="req">*</span></label>
-                <input id="f-prenom" name="Prénom" type="text" placeholder="Votre prénom" required>
-              </div>
-              <div class="ct-field">
-                <label for="f-nom">Nom <span class="req">*</span></label>
-                <input id="f-nom" name="Nom" type="text" placeholder="Votre nom" required>
-              </div>
-            </div>
-
-            <div class="ct-row">
-              <div class="ct-field">
-                <label for="f-email">Email professionnel <span class="req">*</span></label>
-                <input id="f-email" name="Email pro" type="email" placeholder="vous@entreprise.ma" required>
-              </div>
-              <div class="ct-field">
-                <label for="f-tel">Téléphone</label>
-                <input id="f-tel" name="Téléphone" type="tel" placeholder="+212 6 XX XX XX XX">
-              </div>
-            </div>
-
-            <div class="ct-row">
-              <div class="ct-field">
-                <label for="f-entreprise">Entreprise <span class="req">*</span></label>
-                <input id="f-entreprise" name="Entreprise" type="text" placeholder="Votre société" required>
-              </div>
-              <div class="ct-field">
-                <label for="f-fonction">Fonction</label>
-                <input id="f-fonction" name="Fonction" type="text" placeholder="DG, DRH, Manager…">
-              </div>
-            </div>
-
-            <div class="ct-field">
-              <label for="f-ville">Ville <span class="req">*</span></label>
-              <select id="f-ville" name="Ville" required>
-                <option value="" disabled selected hidden>Sélectionnez votre ville</option>
-                <option>Casablanca</option>
-                <option>Rabat</option>
-                <option>Marrakech</option>
-                <option>Tanger</option>
-                <option>Agadir</option>
-                <option>Fès</option>
-                <option>Autre ville</option>
-              </select>
-            </div>
-
-            <div class="ct-field full ct-other" id="ct-ville-other" hidden>
-              <label for="f-ville-autre">Précisez votre ville <span class="req">*</span></label>
-              <input id="f-ville-autre" name="Autre ville" type="text" placeholder="Nom de votre ville">
-            </div>
-
-            <div class="ct-sep">Votre projet</div>
-
-            <div class="ct-row">
-              <div class="ct-field">
-                <label for="f-type">Type d'expérience <span class="req">*</span></label>
-                <select id="f-type" name="Prestation" required>
-                  <option value="" disabled selected hidden>Choisissez une prestation</option>
-                  <option>Team building</option>
-                  <option>Séminaire / convention</option>
-                  <option>Coaching d'équipe</option>
-                  <option>RSE / ESG</option>
-                  <option>Soirée d'entreprise</option>
-                  <option>Je ne sais pas encore</option>
-                </select>
-              </div>
-              <div class="ct-field">
-                <label for="f-part">Participants</label>
-                <select id="f-part" name="Participants">
-                  <option value="" disabled selected hidden>Nombre approximatif</option>
-                  <option>Moins de 20</option>
-                  <option>20 à 50</option>
-                  <option>50 à 100</option>
-                  <option>100 à 200</option>
-                  <option>Plus de 200</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="ct-field full">
-              <label for="f-msg">Précisez votre projet <span class="opt">(optionnel)</span></label>
-              <textarea id="f-msg" name="Message" placeholder="Décrivez votre contexte, vos équipes, vos objectifs, vos dates… Plus vous êtes précis, plus notre proposition sera adaptée."></textarea>
-            </div>
-
-            <label class="ct-consent">
-              <input type="checkbox" name="Consentement" required>
-              <span>J'accepte d'être recontacté(e) par l'équipe ON TEAM Evolution au sujet de mon projet. Mes données restent strictement confidentielles.</span>
-            </label>
-
-            <button type="submit" class="btn btn-gold ct-submit">Obtenir mon devis personnalisé
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </button>
-
-            <p class="ct-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Données sécurisées &amp; confidentielles</p>
-          </form>
+      <div class="container merci-inner">
+        <div class="merci-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="chk" d="M4 12.5l5 5L20 6.5"/></svg>
         </div>
-
+        <p class="eyebrow is-center">Demande bien reçue</p>
+        <h1 id="merci-h1">Merci, votre demande est <em>bien partie</em>.</h1>
+        <p class="merci-lede">Notre équipe a bien reçu votre projet. On vous recontacte sous <strong>24&nbsp;h ouvrées</strong> pour un premier échange — sans engagement.</p>
+        <ul class="merci-steps">
+          <li><span class="n">1</span>On étudie votre besoin</li>
+          <li><span class="n">2</span>On vous rappelle sous 24h</li>
+          <li><span class="n">3</span>On vous propose un format sur-mesure</li>
+        </ul>
+        <div class="merci-actions">
+          <a class="btn btn-gold" href="/">Retour à l'accueil
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="/nos-prestations.html">Voir nos prestations</a>
+        </div>
+        <p class="merci-contact">Une question d'ici là&nbsp;? <a href="tel:+212661586548">+212 661 58 65 48</a> · <a href="mailto:contact@onteam.ma">contact@onteam.ma</a></p>
       </div>
     </section>
   </main>
@@ -712,20 +615,6 @@
       /* Histoire : on attend que l'ensemble de la section soit bien visible avant de lancer la frise */
       var ioHisto = new IntersectionObserver(function(e){ onIn(ioHisto)(e); }, {threshold:.3, rootMargin:'0px 0px -12% 0px'});
       document.querySelectorAll('.histo').forEach(function(el){ ioHisto.observe(el); });
-    })();
-    /* Contact : champ « ville » personnalisé quand on choisit « Autre ville » */
-    (function(){
-      var sel=document.getElementById('f-ville'),
-          box=document.getElementById('ct-ville-other'),
-          inp=document.getElementById('f-ville-autre');
-      if(!sel||!box) return;
-      function sync(){
-        var other=sel.value==='Autre ville';
-        box.hidden=!other;
-        if(inp){ inp.required=other; if(!other) inp.value=''; }
-      }
-      sel.addEventListener('change',sync);
-      sync();
     })();
   </script>
 </body>
