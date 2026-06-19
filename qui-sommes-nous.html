@@ -336,8 +336,8 @@
     .footer-credit:hover .yn::after{transform:scaleX(1)}
     .footer-credit .arrow{font-size:.78rem;transition:transform .25s}
     .footer-credit:hover .arrow{transform:translateX(3px)}
-    .footer-credit .yn-anim{background:linear-gradient(100deg,var(--gold-400) 18%,#FFF1CF 42%,var(--gold-ink) 64%,var(--gold-400) 88%);background-size:230% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:ynShine 3.4s linear infinite}
-    @keyframes ynShine{0%{background-position:0 0}100%{background-position:-230% 0}}
+    .footer-credit .yn-anim{color:var(--gold-400);font-weight:700;animation:ynGlow 2.4s ease-in-out infinite}
+    @keyframes ynGlow{0%,100%{color:var(--gold-400);text-shadow:0 0 0 rgba(242,200,121,0)}50%{color:#FFE9C2;text-shadow:0 0 14px rgba(242,200,121,.9)}}
     .footer-maison{margin-top:1.05rem;padding-top:1rem;border-top:1px solid rgba(247,244,237,.12)}
     .footer-maison .fm-label{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,237,.45);margin-bottom:.45rem}
     .footer-maison .fm-link{position:relative;display:inline-block;font-family:var(--font-display);font-weight:500;font-size:1.02rem;line-height:1.2;color:var(--gold-400);text-decoration:none;transition:color .2s}
@@ -732,7 +732,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 ON TEAM Evolution · Tous droits réservés</span>
-        <a class="footer-credit" href="https://yngrowth.com" target="_blank" rel="noopener" aria-label="Y&amp;N Growth"><span class="yn yn-anim">Y&amp;N Growth</span><span class="arrow" aria-hidden="true">→</span></a>
+        <a class="footer-credit" href="https://yngrowth.com" target="_blank" rel="noopener" aria-label="Site réalisé par Y&amp;N Growth">Site réalisé par <span class="yn yn-anim">Y&amp;N Growth</span><span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </footer>

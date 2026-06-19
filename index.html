@@ -473,8 +473,8 @@
     .footer-credit:hover .yn::after{transform:scaleX(1)}
     .footer-credit .arrow{font-size:.78rem;transition:transform .25s}
     .footer-credit:hover .arrow{transform:translateX(3px)}
-    .footer-credit .yn-anim{background:linear-gradient(100deg,var(--gold-400) 18%,#FFF1CF 42%,var(--gold-ink) 64%,var(--gold-400) 88%);background-size:230% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:ynShine 3.4s linear infinite}
-    @keyframes ynShine{0%{background-position:0 0}100%{background-position:-230% 0}}
+    .footer-credit .yn-anim{color:var(--gold-400);font-weight:700;animation:ynGlow 2.4s ease-in-out infinite}
+    @keyframes ynGlow{0%,100%{color:var(--gold-400);text-shadow:0 0 0 rgba(242,200,121,0)}50%{color:#FFE9C2;text-shadow:0 0 14px rgba(242,200,121,.9)}}
     .footer-maison{margin-top:1.05rem;padding-top:1rem;border-top:1px solid rgba(247,244,237,.12)}
     .footer-maison .fm-label{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,237,.45);margin-bottom:.45rem}
     .footer-maison .fm-link{position:relative;display:inline-block;font-family:var(--font-display);font-weight:500;font-size:1.02rem;line-height:1.2;color:var(--gold-400);text-decoration:none;transition:color .2s}
@@ -503,6 +503,32 @@
     .cta-btn:hover svg{transform:translateX(4px)}
     .cta-note{font-size:.78rem;letter-spacing:.03em;color:rgba(247,244,237,.6)}
     @media(max-width:760px){.cta-inner{flex-direction:column;align-items:flex-start}.cta-act{align-items:flex-start}}
+    /* ===================== GALERIE ===================== */
+    .gallery{position:relative;overflow:hidden;background:var(--white);padding-block:clamp(2.4rem,5vw,4.2rem)}
+    .gallery-head{text-align:center;max-width:54ch;margin:0 auto clamp(1.3rem,3vw,1.9rem)}
+    .gallery-eyebrow{display:flex;align-items:center;justify-content:center;gap:.9rem;font-family:var(--font-body);font-weight:600;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--green-700);margin:0 0 1rem}
+    .gallery-eyebrow::before,.gallery-eyebrow::after{content:"";height:1px;width:clamp(26px,6vw,52px)}
+    .gallery-eyebrow::before{background:linear-gradient(90deg,transparent,var(--gold-ink))}
+    .gallery-eyebrow::after{background:linear-gradient(90deg,var(--gold-ink),transparent)}
+    .gallery-head h2{font-family:var(--font-display);font-weight:500;font-size:clamp(1.8rem,1.3rem + 2vw,2.8rem);line-height:1.08;letter-spacing:-.018em;color:var(--green-800)}
+    .gallery-head h2 em{font-style:italic;color:var(--gold-ink)}
+    .gallery-lede{margin-top:.7rem;color:var(--muted);font-size:clamp(1rem,.97rem + .3vw,1.12rem);line-height:1.6}
+    .gallery-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:clamp(1.4rem,3vw,2.1rem)}
+    .gf-pill{font-family:var(--font-body);font-weight:600;font-size:.82rem;color:var(--green-700);background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:.5rem 1.1rem;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+    .gf-pill:hover{border-color:rgba(176,125,46,.5)}
+    .gf-pill.is-active{background:var(--green-800);color:var(--cream);border-color:var(--green-800)}
+    .gallery-stage{position:relative;width:100%;overflow:hidden}
+    .gallery-track{display:flex;align-items:center;gap:clamp(.8rem,2vw,1.4rem);transition:transform .55s cubic-bezier(.4,0,.2,1);will-change:transform}
+    .gal-item{flex:0 0 clamp(220px,52vw,360px);aspect-ratio:4/3;margin:1.2rem 0;border-radius:18px;overflow:hidden;cursor:pointer;opacity:.45;transform:scale(.84);transition:transform .55s cubic-bezier(.4,0,.2,1),opacity .55s,box-shadow .55s;border:5px solid var(--white);box-shadow:0 12px 30px -18px rgba(14,38,28,.5);background:#EFE8DA}
+    .gal-item img{width:100%;height:100%;object-fit:cover;display:block}
+    .gal-item.is-active{opacity:1;transform:scale(1.05);box-shadow:0 34px 64px -28px rgba(14,38,28,.7)}
+    .gal-item[hidden]{display:none}
+    .gallery-nav{display:flex;justify-content:center;gap:.8rem;margin-top:clamp(.6rem,1.6vw,1.1rem)}
+    .gal-nav{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--cream);border:1px solid var(--line);color:var(--green-800);font-size:1.5rem;line-height:1;cursor:pointer;transition:background .25s,color .25s,border-color .25s,opacity .25s}
+    .gal-nav:hover{background:var(--green-800);color:var(--cream);border-color:var(--green-800)}
+    .gal-nav:disabled{opacity:.35;cursor:default}
+    .gal-nav:disabled:hover{background:var(--cream);color:var(--green-800);border-color:var(--line)}
+    @media (prefers-reduced-motion:reduce){.gallery-track,.gal-item{transition:none}}
   </style>
 </head>
 <body>
@@ -652,6 +678,13 @@
                   <p class="presta-tags">Cohésion · Ludique · Apprentissage</p>
                 </div>
               </a>
+              <a class="presta-card presta-feature" role="listitem" href="contact.html?experience=team-building&amp;sujet=la-tour" aria-label="La Tour — nous contacter pour en savoir plus">
+                <span class="pf-tag">Best-seller</span>
+                <h3 class="pf-title">«&nbsp;La Tour&nbsp;»</h3>
+                <p class="pf-hook">Un secret bien gardé.</p>
+                <p class="pf-sub">Notre Learning Game maison.</p>
+                <span class="pf-cta">On vous en dit plus <span class="pf-arrow" aria-hidden="true">&rarr;</span></span>
+              </a>
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>Coaching d'équipe</h3>
@@ -687,13 +720,6 @@
                   <span class="presta-arrow" aria-hidden="true">&rarr;</span>
                   <p class="presta-tags">Convivialité · Célébration · Lien</p>
                 </div>
-              </a>
-              <a class="presta-card presta-feature" role="listitem" href="contact.html?experience=team-building&amp;sujet=la-tour" aria-label="La Tour — nous contacter pour en savoir plus">
-                <span class="pf-tag">Best-seller</span>
-                <h3 class="pf-title">«&nbsp;La Tour&nbsp;»</h3>
-                <p class="pf-hook">Un secret bien gardé.</p>
-                <p class="pf-sub">Notre Learning Game maison.</p>
-                <span class="pf-cta">On vous en dit plus <span class="pf-arrow" aria-hidden="true">&rarr;</span></span>
               </a>
             </div>
           </div>
@@ -941,6 +967,35 @@
         </div>
       </div>
     </section>
+    <!-- GALERIE -->
+    <section class="gallery" aria-labelledby="gal-title">
+      <div class="container">
+        <div class="gallery-head">
+          <p class="gallery-eyebrow">Galerie</p>
+          <h2 id="gal-title">Nos moments en <em>images</em>.</h2>
+          <p class="gallery-lede">Team buildings, ateliers créatifs et séminaires&nbsp;: un aperçu de nos expériences sur le terrain.</p>
+        </div>
+        <div class="gallery-filters">
+          <button class="gf-pill is-active" type="button" data-filter="all">Tout</button>
+          <button class="gf-pill" type="button" data-filter="tb">Team building</button>
+          <button class="gf-pill" type="button" data-filter="atelier">Ateliers</button>
+          <button class="gf-pill" type="button" data-filter="seminaire">Séminaires</button>
+          <button class="gf-pill" type="button" data-filter="aventure">Aventure</button>
+        </div>
+        <div class="gallery-stage">
+          <div class="gallery-track">
+            <figure class="gal-item" data-cat="tb"><img src="assets/images/team-building-outdoor.jpg" alt="Team building en extérieur" loading="lazy"></figure>
+            <figure class="gal-item" data-cat="atelier"><img src="assets/images/coaching-equipe.jpg" alt="Atelier de cohésion d'équipe" loading="lazy"></figure>
+            <figure class="gal-item" data-cat="seminaire"><img src="assets/images/seminaire-salle.jpg" alt="Séminaire d'entreprise" loading="lazy"></figure>
+            <figure class="gal-item" data-cat="aventure"><img src="assets/images/paintball.jpg" alt="Activité aventure en plein air" loading="lazy"></figure>
+          </div>
+        </div>
+        <div class="gallery-nav">
+          <button class="gal-nav gal-prev" type="button" aria-label="Image précédente">&lsaquo;</button>
+          <button class="gal-nav gal-next" type="button" aria-label="Image suivante">&rsaquo;</button>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -990,7 +1045,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 ON TEAM Evolution · Tous droits réservés</span>
-        <a class="footer-credit" href="https://yngrowth.com" target="_blank" rel="noopener" aria-label="Y&amp;N Growth"><span class="yn yn-anim">Y&amp;N Growth</span><span class="arrow" aria-hidden="true">→</span></a>
+        <a class="footer-credit" href="https://yngrowth.com" target="_blank" rel="noopener" aria-label="Site réalisé par Y&amp;N Growth">Site réalisé par <span class="yn yn-anim">Y&amp;N Growth</span><span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </footer>
@@ -1089,6 +1144,35 @@
         btn.setAttribute('aria-expanded', exp ? 'true' : 'false');
       });
     });
+  })();
+  </script>
+  <script>
+  (function(){
+    var track=document.querySelector('.gallery-track');
+    if(!track) return;
+    var stage=track.parentElement;
+    var items=[].slice.call(track.querySelectorAll('.gal-item'));
+    var prev=document.querySelector('.gal-prev'), next=document.querySelector('.gal-next');
+    var pills=[].slice.call(document.querySelectorAll('.gf-pill'));
+    var filter='all', idx=0;
+    function vis(){ return items.filter(function(it){ return filter==='all'||it.getAttribute('data-cat')===filter; }); }
+    function layout(){
+      items.forEach(function(it){ it.hidden = !(filter==='all'||it.getAttribute('data-cat')===filter); });
+      var v=vis();
+      if(idx>v.length-1) idx=v.length-1; if(idx<0) idx=0;
+      v.forEach(function(it,i){ it.classList.toggle('is-active', i===idx); });
+      var a=v[idx];
+      if(a){ var off=a.offsetLeft + a.offsetWidth/2 - stage.clientWidth/2; track.style.transform='translateX('+(-off).toFixed(1)+'px)'; }
+      if(prev) prev.disabled = idx<=0;
+      if(next) next.disabled = idx>=v.length-1;
+    }
+    if(prev) prev.addEventListener('click',function(){ idx--; layout(); });
+    if(next) next.addEventListener('click',function(){ idx++; layout(); });
+    items.forEach(function(it){ it.addEventListener('click',function(){ var v=vis(), i=v.indexOf(it); if(i>=0){ idx=i; layout(); } }); });
+    pills.forEach(function(p){ p.addEventListener('click',function(){ pills.forEach(function(x){x.classList.remove('is-active');}); p.classList.add('is-active'); filter=p.getAttribute('data-filter'); idx=0; layout(); }); });
+    window.addEventListener('resize', layout);
+    window.addEventListener('load', layout);
+    layout();
   })();
   </script>
 </body>
