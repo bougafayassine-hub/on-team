@@ -332,16 +332,6 @@
     .promise-card{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:clamp(1.5rem,3vw,2.3rem);transition:border-color .3s,transform .3s,box-shadow .3s}
     .promise-card:hover{border-color:rgba(176,125,46,.5);transform:translateY(-3px);box-shadow:var(--shadow-md)}
     .promise-card .mk{display:block;width:28px;height:2px;border-radius:2px;background:var(--gold-ink);margin-bottom:1rem}
-    .promise-bestseller{display:inline-flex;flex-direction:column;gap:.28rem;margin-top:1.15rem;padding:.7rem .9rem;border:1px solid var(--line);border-left:3px solid var(--gold-ink);border-radius:11px;background:rgba(214,161,86,.07);text-decoration:none;transition:border-color .25s,background .25s,transform .2s,box-shadow .25s}
-    .promise-bestseller:hover{border-color:rgba(176,125,46,.55);background:rgba(214,161,86,.12);transform:translateY(-1px);box-shadow:0 6px 16px -10px rgba(176,125,46,.6)}
-    .pb-row{display:inline-flex;align-items:center;gap:.5rem;flex-wrap:wrap}
-    .pb-tag{flex:0 0 auto;font-family:var(--font-body);font-weight:700;font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--gold-500),var(--gold-ink));padding:.32em .62em;border-radius:999px}
-    .pb-title{font-size:.86rem;font-weight:600;color:var(--green-800)}
-    .pb-title strong{color:var(--gold-ink);font-weight:700}
-    .pb-cta{display:inline-flex;align-items:center;gap:.32rem;font-family:var(--font-body);font-weight:700;font-size:.76rem;letter-spacing:.01em;color:var(--gold-ink)}
-    .pb-cta span{transition:transform .25s}
-    .promise-bestseller:hover .pb-cta span{transform:translateX(3px)}
-    .pb-sub{font-size:.74rem;line-height:1.4;color:var(--muted)}
     .promise-card h3{font-family:var(--font-display);font-weight:500;font-size:clamp(1.2rem,1.1rem + .4vw,1.42rem);letter-spacing:-.012em;color:var(--green-800);margin-bottom:.7rem;min-height:1.3em}
     .promise-card p{color:var(--muted);font-size:1rem;line-height:1.62}
     .promise-plus{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--white);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:1.55rem;line-height:1;color:var(--gold-ink);box-shadow:0 8px 22px -10px rgba(14,38,28,.35);z-index:2;animation:plusPulse 2.4s ease-in-out infinite}
@@ -377,14 +367,24 @@
     .presta-card{flex:0 0 clamp(238px,74vw,310px);scroll-snap-align:center;display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:clamp(1.45rem,2.6vw,1.95rem);min-height:252px;color:inherit;transition:border-color .3s,box-shadow .3s;will-change:transform,opacity}
     .presta-card:hover{border-color:rgba(176,125,46,.55);box-shadow:var(--shadow-md)}
     .presta-card .mk{width:28px;height:2px;border-radius:2px;background:var(--gold-ink);margin-bottom:1rem}
-    .presta-card h3{font-family:var(--font-display);font-weight:500;font-size:clamp(1.22rem,1.1rem + .5vw,1.5rem);letter-spacing:-.012em;color:var(--green-800);margin-bottom:.5rem;min-height:2.1em}
-    .presta-aka{font-size:.84rem;font-weight:600;line-height:1.5;color:var(--gold-ink);margin:0 0 .9rem;min-height:2.55rem}
-    .presta-aka strong{font-weight:700}
+    .presta-card h3{font-family:var(--font-display);font-weight:500;font-size:clamp(1.22rem,1.1rem + .5vw,1.5rem);letter-spacing:-.012em;color:var(--green-800);margin-bottom:.8rem;min-height:2.1em}
     .presta-desc{font-size:.95rem;line-height:1.58;color:var(--muted)}
     .presta-arrow{font-family:var(--font-display);font-size:1.3rem;line-height:1;color:var(--gold-ink);transition:transform .3s}
     .presta-cardfoot{margin-top:auto;padding-top:1.1rem;display:flex;flex-direction:column;gap:.6rem}
     .presta-tags{font-size:.62rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--gold-ink);line-height:1.5;white-space:nowrap}
     .presta-card:hover .presta-arrow{transform:translateX(5px)}
+    /* carte coup de cœur (distincte des prestations classiques) */
+    .presta-feature{background:radial-gradient(120% 100% at 100% 0,rgba(214,161,86,.16),transparent 55%),linear-gradient(160deg,#10301F,var(--green-900));border:1px solid var(--gold-500);color:var(--cream)}
+    .presta-feature:hover{border-color:var(--gold-400);box-shadow:0 18px 42px -20px rgba(0,0,0,.6)}
+    .pf-tag{align-self:flex-start;font-family:var(--font-body);font-weight:700;font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--green-900);background:linear-gradient(135deg,var(--gold-400),var(--gold-ink));padding:.34em .7em;border-radius:999px;margin-bottom:.9rem}
+    .presta-feature .pf-title{font-family:var(--font-display);font-weight:500;font-size:clamp(1.3rem,1.1rem + .6vw,1.6rem);letter-spacing:-.01em;color:var(--cream);min-height:0;margin-bottom:.45rem}
+    .pf-hook{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:1.1rem;line-height:1.3;color:var(--gold-400)}
+    .pf-sub{margin-top:.3rem;font-size:.86rem;line-height:1.45;color:rgba(247,244,237,.62)}
+    .pf-cta{margin-top:auto;padding-top:1.2rem;display:flex;justify-content:flex-end;align-items:center;gap:.35rem;font-family:var(--font-body);font-weight:700;font-size:.82rem;letter-spacing:.01em;color:var(--gold-400)}
+    .pf-arrow{display:inline-block;animation:pfNudge 1.9s ease-in-out infinite}
+    .presta-feature:hover .pf-arrow{transform:translateX(5px);animation:none}
+    @keyframes pfNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
+    @media (prefers-reduced-motion:reduce){.pf-arrow{animation:none}}
     .presta-foot{text-align:center;margin-top:clamp(1rem,2.4vw,1.5rem)}
     .presta-foot .btn-ghost{color:var(--green-800);border-color:rgba(20,53,36,.24)}
 
@@ -584,18 +584,13 @@
         <div class="promise-head">
           <p class="promise-eyebrow">Notre promesse</p>
           <h2 class="promise-title" id="promise-title">Le plaisir d'abord. <em>L'impact</em> en plus.</h2>
-          <p class="promise-lede">Un team building réussi, ce n'est pas choisir entre s'amuser et progresser. C'est les deux — et c'est exactement ce que nous vous garantissons.</p>
+          <p class="promise-lede">Un team building réussi, ce n'est pas choisir entre s'amuser et progresser. C'est les deux, et c'est exactement ce que nous vous garantissons.</p>
         </div>
         <div class="promise-pair">
           <article class="promise-card">
             <span class="mk" aria-hidden="true"></span>
             <h3>Le plaisir, pour de vrai</h3>
-            <p>On rit, on lâche prise, on crée des souvenirs. Des activités vivantes, pensées pour reconnecter les équipes — jamais pour les mettre sous pression.</p>
-            <a class="promise-bestseller" href="contact.html?experience=team-building&amp;sujet=la-tour" aria-label="La Tour — nous contacter pour en savoir plus">
-              <span class="pb-row"><span class="pb-tag">Best-seller</span><span class="pb-title">« La Tour », notre <strong>Team building</strong> maison</span></span>
-              <span class="pb-cta">On vous en dit plus <span aria-hidden="true">→</span></span>
-              <span class="pb-sub">Un secret bien gardé. On le dévoile sur demande.</span>
-            </a>
+            <p>On rit, on lâche prise, on crée des souvenirs. Des activités vivantes, pensées pour reconnecter les équipes, jamais pour les mettre sous pression.</p>
           </article>
           <span class="promise-plus" aria-hidden="true">+</span>
           <article class="promise-card">
@@ -651,8 +646,7 @@
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>Team building</h3>
-                <p class="presta-aka">Un secret&nbsp;? En interne, on dit plutôt <strong>learning&nbsp;games</strong>.</p>
-                <p class="presta-desc">Chez nous, le jeu est un vrai moment de plaisir — et il sert toujours un objectif : apprendre, coopérer et progresser ensemble.</p>
+                <p class="presta-desc">Chez nous, le jeu est un vrai moment de plaisir qui sert toujours un objectif : apprendre, coopérer et progresser ensemble.</p>
                 <div class="presta-cardfoot">
                   <span class="presta-arrow" aria-hidden="true">&rarr;</span>
                   <p class="presta-tags">Cohésion · Ludique · Apprentissage</p>
@@ -661,7 +655,6 @@
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>Coaching d'équipe</h3>
-                <p class="presta-aka" aria-hidden="true"></p>
                 <p class="presta-desc">Lever les tensions, fluidifier la communication, installer la confiance qui fait avancer le collectif.</p>
                 <div class="presta-cardfoot">
                   <span class="presta-arrow" aria-hidden="true">&rarr;</span>
@@ -671,7 +664,6 @@
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>Séminaires &amp; conventions</h3>
-                <p class="presta-aka" aria-hidden="true"></p>
                 <p class="presta-desc">Vos temps forts d'entreprise orchestrés de bout en bout, sans fausse note.</p>
                 <div class="presta-cardfoot">
                   <span class="presta-arrow" aria-hidden="true">&rarr;</span>
@@ -681,7 +673,6 @@
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>RSE / ESG</h3>
-                <p class="presta-aka" aria-hidden="true"></p>
                 <p class="presta-desc">Des ateliers à impact pour fédérer vos équipes autour de valeurs concrètes et durables.</p>
                 <div class="presta-cardfoot">
                   <span class="presta-arrow" aria-hidden="true">&rarr;</span>
@@ -691,12 +682,18 @@
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>Soirées d'entreprise</h3>
-                <p class="presta-aka" aria-hidden="true"></p>
                 <p class="presta-desc">Des moments fédérateurs pour célébrer, récompenser et resserrer les liens.</p>
                 <div class="presta-cardfoot">
                   <span class="presta-arrow" aria-hidden="true">&rarr;</span>
                   <p class="presta-tags">Convivialité · Célébration · Lien</p>
                 </div>
+              </a>
+              <a class="presta-card presta-feature" role="listitem" href="contact.html?experience=team-building&amp;sujet=la-tour" aria-label="La Tour — nous contacter pour en savoir plus">
+                <span class="pf-tag">Best-seller</span>
+                <h3 class="pf-title">«&nbsp;La Tour&nbsp;»</h3>
+                <p class="pf-hook">Un secret bien gardé.</p>
+                <p class="pf-sub">Notre Learning Game maison.</p>
+                <span class="pf-cta">On vous en dit plus <span class="pf-arrow" aria-hidden="true">&rarr;</span></span>
               </a>
             </div>
           </div>
@@ -992,7 +989,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 ON TEAM Evolution — Tous droits réservés</span>
+        <span>© 2026 ON TEAM Evolution · Tous droits réservés</span>
         <a class="footer-credit" href="https://yngrowth.com" target="_blank" rel="noopener" aria-label="Y&amp;N Growth"><span class="yn yn-anim">Y&amp;N Growth</span><span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
