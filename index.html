@@ -465,6 +465,13 @@
     .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
     .footer-col a{color:rgba(247,244,237,.72);font-size:.95rem;text-decoration:none;transition:color .2s}
     .footer-col a:hover{color:var(--gold-400)}
+    .footer-group{margin-top:1.3rem;padding-top:1.2rem;border-top:1px solid rgba(247,244,237,.1)}
+    .footer-group h3{font-family:var(--font-body);color:var(--gold-400);font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700;margin:0 0 .55rem}
+    .footer-group .grp-link{position:relative;display:inline-block;font-family:var(--font-display);font-weight:500;font-size:1.08rem;line-height:1.2;color:var(--cream);transition:color .22s}
+    .footer-group .grp-link::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1.5px;background:linear-gradient(90deg,var(--gold-400),var(--gold-500));transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.22,1,.36,1)}
+    .footer-group .grp-link:hover{color:var(--gold-400)}
+    .footer-group .grp-link:hover::after{transform:scaleX(1)}
+    .footer-group .grp-sub{display:block;margin-top:.3rem;font-size:.85rem;color:rgba(247,244,237,.55)}
     .footer-bottom{margin-top:clamp(1.4rem,3vw,2rem);padding-top:1rem;border-top:1px solid rgba(247,244,237,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.7rem;font-size:.85rem;color:rgba(247,244,237,.5)}
     .footer-credit{display:inline-flex;align-items:center;gap:.4rem;color:rgba(247,244,237,.5);text-decoration:none;transition:color .25s}
     .footer-credit:hover{color:rgba(247,244,237,.82)}
@@ -942,6 +949,11 @@
             <a href="tel:+212661586548"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>+212 661 58 65 48</a>
             <a href="mailto:contact@onteam.ma"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>contact@onteam.ma</a>
             <span class="fc-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Casablanca, Maroc</span>
+          </div>
+          <div class="footer-group">
+            <h3>Le groupe</h3>
+            <a class="grp-link" href="https://vakom-casablanca.ma" target="_blank" rel="noopener">Vakom Casablanca</a>
+            <span class="grp-sub">Cabinet RH &amp; Management</span>
           </div>
         </div>
         <div class="footer-col">
