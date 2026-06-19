@@ -76,8 +76,10 @@
   .nav-cta{display:inline-flex;align-items:center;padding:.6rem 1.45rem;
     background:var(--green-800);color:var(--cream);border-radius:999px;font-size:.85rem;font-weight:600;
     letter-spacing:.025em;border:1px solid var(--green-800);
-    transition:background .26s,color .26s,transform .26s,box-shadow .26s,border-color .26s}
+    transition:background .26s,color .26s,transform .26s,box-shadow .26s,border-color .26s;animation:ctaPulse 2.8s ease-in-out infinite}
   .nav-cta:hover{background:transparent;color:var(--green-900);border-color:rgba(20,53,36,.28);transform:translateY(-1px)}
+    @keyframes ctaPulse{0%,100%{box-shadow:0 0 0 0 rgba(214,161,86,0)}50%{box-shadow:0 0 0 5px rgba(214,161,86,.20)}}
+    @media (prefers-reduced-motion:reduce){.nav-cta{animation:none}}
 
   /* burger (mobile) */
   .nav-toggle{display:none}
@@ -504,8 +506,8 @@
     .cta-note{font-size:.78rem;letter-spacing:.03em;color:rgba(247,244,237,.6)}
     @media(max-width:760px){.cta-inner{flex-direction:column;align-items:flex-start}.cta-act{align-items:flex-start}}
     /* ===================== GALERIE ===================== */
-    .gallery{position:relative;overflow:hidden;background:var(--white);padding-block:clamp(2.4rem,5vw,4.2rem)}
-    .gallery-head{text-align:center;max-width:54ch;margin:0 auto clamp(1.3rem,3vw,1.9rem)}
+    .gallery{position:relative;overflow:hidden;background:radial-gradient(70% 90% at 50% 0%,rgba(214,161,86,.10),transparent 60%),var(--white);padding-block:clamp(2.6rem,5vw,4.4rem)}
+    .gallery-head{text-align:center;max-width:54ch;margin:0 auto clamp(1.6rem,3.4vw,2.4rem)}
     .gallery-eyebrow{display:flex;align-items:center;justify-content:center;gap:.9rem;font-family:var(--font-body);font-weight:600;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--green-700);margin:0 0 1rem}
     .gallery-eyebrow::before,.gallery-eyebrow::after{content:"";height:1px;width:clamp(26px,6vw,52px)}
     .gallery-eyebrow::before{background:linear-gradient(90deg,transparent,var(--gold-ink))}
@@ -513,21 +515,20 @@
     .gallery-head h2{font-family:var(--font-display);font-weight:500;font-size:clamp(1.8rem,1.3rem + 2vw,2.8rem);line-height:1.08;letter-spacing:-.018em;color:var(--green-800)}
     .gallery-head h2 em{font-style:italic;color:var(--gold-ink)}
     .gallery-lede{margin-top:.7rem;color:var(--muted);font-size:clamp(1rem,.97rem + .3vw,1.12rem);line-height:1.6}
-    .gallery-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:clamp(1.4rem,3vw,2.1rem)}
-    .gf-pill{font-family:var(--font-body);font-weight:600;font-size:.82rem;color:var(--green-700);background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:.5rem 1.1rem;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
-    .gf-pill:hover{border-color:rgba(176,125,46,.5)}
-    .gf-pill.is-active{background:var(--green-800);color:var(--cream);border-color:var(--green-800)}
-    .gallery-stage{position:relative;width:100%;overflow:hidden}
-    .gallery-track{display:flex;align-items:center;gap:clamp(.8rem,2vw,1.4rem);transition:transform .55s cubic-bezier(.4,0,.2,1);will-change:transform}
-    .gal-item{flex:0 0 clamp(220px,52vw,360px);aspect-ratio:4/3;margin:1.2rem 0;border-radius:18px;overflow:hidden;cursor:pointer;opacity:.45;transform:scale(.84);transition:transform .55s cubic-bezier(.4,0,.2,1),opacity .55s,box-shadow .55s;border:5px solid var(--white);box-shadow:0 12px 30px -18px rgba(14,38,28,.5);background:#EFE8DA}
+    .gallery-stage{position:relative;width:100%;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+    .gallery-track{display:flex;align-items:center;gap:clamp(.9rem,2.2vw,1.6rem);transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform}
+    .gal-item{flex:0 0 clamp(230px,54vw,400px);aspect-ratio:4/3;margin:1.6rem 0;border-radius:20px;overflow:hidden;cursor:pointer;position:relative;opacity:.4;transform:scale(.82);transition:transform .6s cubic-bezier(.4,0,.2,1),opacity .6s,box-shadow .6s,border-color .6s;border:1px solid var(--line);box-shadow:0 14px 34px -22px rgba(14,38,28,.55);background:#EFE8DA}
+    .gal-item::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(20,53,36,.06);pointer-events:none;transition:box-shadow .6s}
     .gal-item img{width:100%;height:100%;object-fit:cover;display:block}
-    .gal-item.is-active{opacity:1;transform:scale(1.05);box-shadow:0 34px 64px -28px rgba(14,38,28,.7)}
-    .gal-item[hidden]{display:none}
-    .gallery-nav{display:flex;justify-content:center;gap:.8rem;margin-top:clamp(.6rem,1.6vw,1.1rem)}
-    .gal-nav{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--cream);border:1px solid var(--line);color:var(--green-800);font-size:1.5rem;line-height:1;cursor:pointer;transition:background .25s,color .25s,border-color .25s,opacity .25s}
-    .gal-nav:hover{background:var(--green-800);color:var(--cream);border-color:var(--green-800)}
-    .gal-nav:disabled{opacity:.35;cursor:default}
-    .gal-nav:disabled:hover{background:var(--cream);color:var(--green-800);border-color:var(--line)}
+    .gal-item.is-active{opacity:1;transform:scale(1.06);box-shadow:0 40px 70px -30px rgba(14,38,28,.7);border-color:rgba(214,161,86,.5)}
+    .gal-item.is-active::after{box-shadow:inset 0 0 0 2px rgba(214,161,86,.6)}
+    .gallery-nav{display:flex;align-items:center;justify-content:center;gap:1.1rem;margin-top:clamp(.8rem,2vw,1.4rem)}
+    .gal-counter{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.06em;color:var(--green-800);min-width:5.5ch;text-align:center}
+    .gal-counter b{color:var(--gold-ink)}
+    .gal-nav{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--cream);border:1px solid var(--line);color:var(--green-800);font-size:1.5rem;line-height:1;cursor:pointer;transition:background .25s,color .25s,border-color .25s,opacity .25s,transform .25s}
+    .gal-nav:hover{background:var(--green-800);color:var(--cream);border-color:var(--green-800);transform:translateY(-2px)}
+    .gal-nav:disabled{opacity:.3;cursor:default}
+    .gal-nav:disabled:hover{background:var(--cream);color:var(--green-800);border-color:var(--line);transform:none}
     @media (prefers-reduced-motion:reduce){.gallery-track,.gal-item{transition:none}}
   </style>
 </head>
@@ -540,7 +541,7 @@
     <nav class="nav-links" aria-label="Navigation principale">
       <a href="index.html" class="active">Accueil</a>
       <a href="qui-sommes-nous.html">Qui sommes-nous&nbsp;?</a>
-      <a href="nos-prestations.html">Nos prestations</a>
+      <a href="index.html#prestations">Nos prestations</a>
       <a href="contact.html">Contact</a>
     </nav>
 
@@ -556,7 +557,7 @@
       <nav class="nav-ov-links" aria-label="Navigation mobile">
         <a href="index.html"><span class="idx">01</span>Accueil</a>
         <a href="qui-sommes-nous.html"><span class="idx">02</span>Qui sommes-nous&nbsp;?</a>
-        <a href="nos-prestations.html"><span class="idx">03</span>Nos prestations</a>
+        <a href="index.html#prestations"><span class="idx">03</span>Nos prestations</a>
         <a href="contact.html"><span class="idx">04</span>Contact</a>
       </nav>
       <a class="nav-ov-cta" href="contact.html">Demander un devis →</a>
@@ -597,7 +598,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             +212 661 58 65 48
           </a>
-          <a class="btn btn-ghost" href="#prestations" style="color:var(--cream);border-color:rgba(247,244,237,.45)">Voir nos activités</a>
+          <a class="btn btn-ghost" href="#galerie" style="color:var(--cream);border-color:rgba(247,244,237,.45)">Voir nos activités</a>
         </div>
       </div>
     </section>
@@ -659,7 +660,7 @@
 
 
     <!-- NOS PRESTATIONS -->
-    <section class="presta" aria-labelledby="presta-title">
+    <section class="presta" id="prestations" aria-labelledby="presta-title">
       <div class="presta-stage">
         <div class="presta-sticky">
           <div class="container presta-head">
@@ -968,30 +969,29 @@
       </div>
     </section>
     <!-- GALERIE -->
-    <section class="gallery" aria-labelledby="gal-title">
+    <section class="gallery" id="galerie" aria-labelledby="gal-title">
       <div class="container">
         <div class="gallery-head">
           <p class="gallery-eyebrow">Galerie</p>
           <h2 id="gal-title">Nos moments en <em>images</em>.</h2>
           <p class="gallery-lede">Team buildings, ateliers créatifs et séminaires&nbsp;: un aperçu de nos expériences sur le terrain.</p>
         </div>
-        <div class="gallery-filters">
-          <button class="gf-pill is-active" type="button" data-filter="all">Tout</button>
-          <button class="gf-pill" type="button" data-filter="tb">Team building</button>
-          <button class="gf-pill" type="button" data-filter="atelier">Ateliers</button>
-          <button class="gf-pill" type="button" data-filter="seminaire">Séminaires</button>
-          <button class="gf-pill" type="button" data-filter="aventure">Aventure</button>
-        </div>
         <div class="gallery-stage">
           <div class="gallery-track">
-            <figure class="gal-item" data-cat="tb"><img src="assets/images/team-building-outdoor.jpg" alt="Team building en extérieur" loading="lazy"></figure>
-            <figure class="gal-item" data-cat="atelier"><img src="assets/images/coaching-equipe.jpg" alt="Atelier de cohésion d'équipe" loading="lazy"></figure>
-            <figure class="gal-item" data-cat="seminaire"><img src="assets/images/seminaire-salle.jpg" alt="Séminaire d'entreprise" loading="lazy"></figure>
-            <figure class="gal-item" data-cat="aventure"><img src="assets/images/paintball.jpg" alt="Activité aventure en plein air" loading="lazy"></figure>
+            <figure class="gal-item"><img src="assets/images/galerie-1.jpg" alt="ON TEAM Evolution — team building, atelier ou séminaire au Maroc" loading="lazy"></figure>
+            <figure class="gal-item"><img src="assets/images/galerie-2.jpg" alt="ON TEAM Evolution — team building, atelier ou séminaire au Maroc" loading="lazy"></figure>
+            <figure class="gal-item"><img src="assets/images/galerie-3.jpg" alt="ON TEAM Evolution — team building, atelier ou séminaire au Maroc" loading="lazy"></figure>
+            <figure class="gal-item"><img src="assets/images/galerie-4.jpg" alt="ON TEAM Evolution — team building, atelier ou séminaire au Maroc" loading="lazy"></figure>
+            <figure class="gal-item"><img src="assets/images/galerie-5.jpg" alt="ON TEAM Evolution — team building, atelier ou séminaire au Maroc" loading="lazy"></figure>
+            <figure class="gal-item"><img src="assets/images/galerie-6.jpg" alt="ON TEAM Evolution — team building, atelier ou séminaire au Maroc" loading="lazy"></figure>
+            <figure class="gal-item"><img src="assets/images/galerie-7.jpg" alt="ON TEAM Evolution — team building, atelier ou séminaire au Maroc" loading="lazy"></figure>
+            <figure class="gal-item"><img src="assets/images/galerie-8.jpg" alt="ON TEAM Evolution — team building, atelier ou séminaire au Maroc" loading="lazy"></figure>
+            <figure class="gal-item"><img src="assets/images/galerie-9.jpg" alt="ON TEAM Evolution — team building, atelier ou séminaire au Maroc" loading="lazy"></figure>
           </div>
         </div>
         <div class="gallery-nav">
           <button class="gal-nav gal-prev" type="button" aria-label="Image précédente">&lsaquo;</button>
+          <span class="gal-counter" aria-live="polite"><b>01</b> / 09</span>
           <button class="gal-nav gal-next" type="button" aria-label="Image suivante">&rsaquo;</button>
         </div>
       </div>
@@ -1148,28 +1148,25 @@
   </script>
   <script>
   (function(){
-    var track=document.querySelector('.gallery-track');
-    if(!track) return;
+    var track=document.querySelector('.gallery-track'); if(!track) return;
     var stage=track.parentElement;
-    var items=[].slice.call(track.querySelectorAll('.gal-item'));
-    var prev=document.querySelector('.gal-prev'), next=document.querySelector('.gal-next');
-    var pills=[].slice.call(document.querySelectorAll('.gf-pill'));
-    var filter='all', idx=0;
-    function vis(){ return items.filter(function(it){ return filter==='all'||it.getAttribute('data-cat')===filter; }); }
+    var items=[].slice.call(track.querySelectorAll('.gal-item')); if(!items.length) return;
+    var prev=document.querySelector('.gal-prev'), next=document.querySelector('.gal-next'), counter=document.querySelector('.gal-counter');
+    var idx=0;
+    function pad(n){ return (n<10?'0':'')+n; }
     function layout(){
-      items.forEach(function(it){ it.hidden = !(filter==='all'||it.getAttribute('data-cat')===filter); });
-      var v=vis();
-      if(idx>v.length-1) idx=v.length-1; if(idx<0) idx=0;
-      v.forEach(function(it,i){ it.classList.toggle('is-active', i===idx); });
-      var a=v[idx];
-      if(a){ var off=a.offsetLeft + a.offsetWidth/2 - stage.clientWidth/2; track.style.transform='translateX('+(-off).toFixed(1)+'px)'; }
-      if(prev) prev.disabled = idx<=0;
-      if(next) next.disabled = idx>=v.length-1;
+      if(idx<0) idx=0; if(idx>items.length-1) idx=items.length-1;
+      items.forEach(function(it,i){ it.classList.toggle('is-active', i===idx); });
+      var a=items[idx];
+      var off=a.offsetLeft+a.offsetWidth/2-stage.clientWidth/2;
+      track.style.transform='translateX('+(-off).toFixed(1)+'px)';
+      if(prev) prev.disabled=idx<=0;
+      if(next) next.disabled=idx>=items.length-1;
+      if(counter) counter.innerHTML='<b>'+pad(idx+1)+'</b> / '+pad(items.length);
     }
     if(prev) prev.addEventListener('click',function(){ idx--; layout(); });
     if(next) next.addEventListener('click',function(){ idx++; layout(); });
-    items.forEach(function(it){ it.addEventListener('click',function(){ var v=vis(), i=v.indexOf(it); if(i>=0){ idx=i; layout(); } }); });
-    pills.forEach(function(p){ p.addEventListener('click',function(){ pills.forEach(function(x){x.classList.remove('is-active');}); p.classList.add('is-active'); filter=p.getAttribute('data-filter'); idx=0; layout(); }); });
+    items.forEach(function(it,i){ it.addEventListener('click',function(){ idx=i; layout(); }); });
     window.addEventListener('resize', layout);
     window.addEventListener('load', layout);
     layout();
