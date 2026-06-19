@@ -349,11 +349,13 @@
     .footer-credit:hover .arrow{transform:translateX(3px)}
     .footer-credit .yn-anim{background:linear-gradient(100deg,var(--gold-400) 18%,#FFF1CF 42%,var(--gold-ink) 64%,var(--gold-400) 88%);background-size:230% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:ynShine 3.4s linear infinite}
     @keyframes ynShine{0%{background-position:0 0}100%{background-position:-230% 0}}
-    .footer-vakom{margin-top:.8rem;padding-top:.8rem;border-top:1px solid rgba(247,244,237,.12);text-align:center;font-size:.82rem;line-height:1.5;color:rgba(247,244,237,.6)}
-    .footer-vakom .vk-link{position:relative;color:var(--gold-400);font-weight:600;text-decoration:none;transition:color .2s}
-    .footer-vakom .vk-link::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1.5px;background:linear-gradient(90deg,var(--gold-400),var(--gold-500));transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.22,1,.36,1)}
-    .footer-vakom .vk-link:hover{color:#FFE3A6}
-    .footer-vakom .vk-link:hover::after{transform:scaleX(1)}
+    .footer-maison{margin-top:1.05rem;padding-top:1rem;border-top:1px solid rgba(247,244,237,.12)}
+    .footer-maison .fm-label{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,237,.45);margin-bottom:.45rem}
+    .footer-maison .fm-link{position:relative;display:inline-block;font-family:var(--font-display);font-weight:500;font-size:1.02rem;line-height:1.2;color:var(--gold-400);text-decoration:none;transition:color .2s}
+    .footer-maison .fm-link::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1.5px;background:linear-gradient(90deg,var(--gold-400),var(--gold-500));transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.22,1,.36,1)}
+    .footer-maison .fm-link:hover{color:#FFE3A6}
+    .footer-maison .fm-link:hover::after{transform:scaleX(1)}
+    .footer-maison .fm-sub{display:block;margin-top:.3rem;font-size:.82rem;color:rgba(247,244,237,.5)}
 
     /* ===================== RESPONSIVE ===================== */
     @media (max-width:980px){
@@ -696,13 +698,17 @@
             <li><a href="mentions-legales.html">Mentions légales</a></li>
             <li><a href="politique-de-confidentialite.html">Politique de confidentialité</a></li>
           </ul>
+          <div class="footer-maison">
+            <span class="fm-label">La même maison</span>
+            <a class="fm-link" href="https://vakom-casablanca.ma/" target="_blank" rel="noopener">Vakom Casablanca</a>
+            <span class="fm-sub">Conseil RH &amp; Management</span>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© 2026 ON TEAM Evolution — Tous droits réservés</span>
         <a class="footer-credit" href="https://yngrowth.com" target="_blank" rel="noopener" aria-label="Y&amp;N Growth"><span class="yn yn-anim">Y&amp;N Growth</span><span class="arrow" aria-hidden="true">→</span></a>
       </div>
-      <div class="footer-vakom">La même maison — <a class="vk-link" href="https://vakom-casablanca.ma/" target="_blank" rel="noopener">Vakom Casablanca</a> · Conseil RH &amp; Management</div>
     </div>
   </footer>
 
