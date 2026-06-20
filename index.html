@@ -335,6 +335,8 @@
     .promise-card:hover{border-color:rgba(176,125,46,.5);transform:translateY(-3px);box-shadow:var(--shadow-md)}
     .promise-card .mk{display:block;width:28px;height:2px;border-radius:2px;background:var(--gold-ink);margin-bottom:1rem}
     .promise-card h3{font-family:var(--font-display);font-weight:500;font-size:clamp(1.2rem,1.1rem + .4vw,1.42rem);letter-spacing:-.012em;color:var(--green-800);margin-bottom:.7rem;min-height:1.3em}
+    .surligne{position:relative;display:inline-block;z-index:0}
+    .surligne::before{content:"";position:absolute;left:-.12em;right:-.14em;top:.34em;bottom:-.04em;z-index:-1;background:linear-gradient(101deg,rgba(231,126,52,0) 1%,rgba(231,126,52,.42) 7%,rgba(231,126,52,.34) 93%,rgba(231,126,52,0) 99%);transform:rotate(-2deg) skewX(-5deg);border-radius:5px 8px 6px 9px}
     .promise-card p{color:var(--muted);font-size:1rem;line-height:1.62}
     .promise-plus{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--white);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:1.55rem;line-height:1;color:var(--gold-ink);box-shadow:0 8px 22px -10px rgba(14,38,28,.35);z-index:2;animation:plusPulse 2.4s ease-in-out infinite}
     @keyframes plusPulse{0%,100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 8px 22px -10px rgba(14,38,28,.35),0 0 0 0 rgba(176,125,46,.5)}50%{transform:translate(-50%,-50%) scale(1.09);box-shadow:0 8px 22px -10px rgba(14,38,28,.35),0 0 0 13px rgba(176,125,46,0)}}
@@ -371,10 +373,22 @@
     .presta-card .mk{width:28px;height:2px;border-radius:2px;background:var(--gold-ink);margin-bottom:1rem}
     .presta-card h3{font-family:var(--font-display);font-weight:500;font-size:clamp(1.22rem,1.1rem + .5vw,1.5rem);letter-spacing:-.012em;color:var(--green-800);margin-bottom:.8rem;min-height:2.1em}
     .presta-desc{font-size:.95rem;line-height:1.58;color:var(--muted)}
-    .presta-arrow{font-family:var(--font-display);font-size:1.3rem;line-height:1;color:var(--gold-ink);transition:transform .3s}
+    .presta-rule{width:30px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--gold-500),var(--gold-ink));transition:width .3s}
     .presta-cardfoot{margin-top:auto;padding-top:1.1rem;display:flex;flex-direction:column;gap:.6rem}
     .presta-tags{font-size:.62rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--gold-ink);line-height:1.5;white-space:nowrap}
-    .presta-card:hover .presta-arrow{transform:translateX(5px)}
+    .presta-aka{font-size:.8rem;font-weight:600;font-style:italic;line-height:1.5;color:var(--muted);margin:-.1rem 0 .85rem;min-height:2.4rem}
+    .presta-aka em{font-style:italic;color:var(--gold-ink);font-weight:700}
+    /* carte CTA finale (dorée, distincte de la carte La Tour) */
+    .presta-cta{background:radial-gradient(120% 100% at 0 0,rgba(255,255,255,.22),transparent 55%),linear-gradient(155deg,var(--gold-400),var(--gold-ink));border:1px solid var(--gold-ink);color:var(--green-900)}
+    .presta-cta:hover{box-shadow:0 20px 44px -20px rgba(176,125,46,.75)}
+    .pc-ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:rgba(14,38,28,.13);color:var(--green-900);margin-bottom:.9rem}
+    .pc-ico svg{width:23px;height:23px}
+    .presta-cta .pc-title{font-family:var(--font-display);font-weight:500;font-size:clamp(1.3rem,1.1rem + .6vw,1.55rem);line-height:1.12;letter-spacing:-.01em;color:var(--green-900);min-height:0;margin-bottom:.5rem}
+    .pc-text{font-size:.92rem;line-height:1.5;color:rgba(14,38,28,.78)}
+    .pc-cta{margin-top:auto;padding-top:1.2rem;display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-body);font-weight:700;font-size:.9rem;color:var(--green-900)}
+    .pc-arrow{display:inline-block;transition:transform .25s}
+    .presta-cta:hover .pc-arrow{transform:translateX(4px)}
+    .presta-card:hover .presta-rule{width:44px}
     /* carte coup de cœur (distincte des prestations classiques) */
     .presta-feature{background:radial-gradient(120% 100% at 100% 0,rgba(214,161,86,.16),transparent 55%),linear-gradient(160deg,#10301F,var(--green-900));border:1px solid var(--gold-500);color:var(--cream)}
     .presta-feature:hover{border-color:var(--gold-400);box-shadow:0 18px 42px -20px rgba(0,0,0,.6)}
@@ -387,8 +401,6 @@
     .presta-feature:hover .pf-arrow{transform:translateX(5px);animation:none}
     @keyframes pfNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
     @media (prefers-reduced-motion:reduce){.pf-arrow{animation:none}}
-    .presta-foot{text-align:center;margin-top:clamp(1rem,2.4vw,1.5rem)}
-    .presta-foot .btn-ghost{color:var(--green-800);border-color:rgba(20,53,36,.24)}
 
     /* ===== ILS NOUS FONT CONFIANCE — bandeau logos défilant ===== */
     .trust{--gold-ink:#B07D2E;background:var(--white);padding-block:clamp(1.7rem,3vw,2.4rem)}
@@ -616,13 +628,13 @@
         <div class="promise-pair">
           <article class="promise-card">
             <span class="mk" aria-hidden="true"></span>
-            <h3>Le plaisir, pour de vrai</h3>
+            <h3><span class="surligne">Le plaisir</span>, pour de vrai</h3>
             <p>On rit, on lâche prise, on crée des souvenirs. Des activités vivantes, pensées pour reconnecter les équipes, jamais pour les mettre sous pression.</p>
           </article>
           <span class="promise-plus" aria-hidden="true">+</span>
           <article class="promise-card">
             <span class="mk" aria-hidden="true"></span>
-            <h3>La restitution, à chaque fois</h3>
+            <h3><span class="surligne">La restitution</span>, à chaque fois</h3>
             <p>Chaque expérience se conclut par un débrief : dynamiques observées, forces révélées, pistes concrètes pour la suite. Du concret, pas seulement un bon souvenir.</p>
           </article>
         </div>
@@ -673,9 +685,10 @@
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>Team building</h3>
+                <p class="presta-aka">En interne, on aime dire <em>«&nbsp;Learning&nbsp;Game&nbsp;»</em>.</p>
                 <p class="presta-desc">Chez nous, le jeu est un vrai moment de plaisir qui sert toujours un objectif : apprendre, coopérer et progresser ensemble.</p>
                 <div class="presta-cardfoot">
-                  <span class="presta-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="presta-rule" aria-hidden="true"></span>
                   <p class="presta-tags">Cohésion · Ludique · Apprentissage</p>
                 </div>
               </a>
@@ -689,45 +702,52 @@
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>Coaching d'équipe</h3>
+                <p class="presta-aka" aria-hidden="true"></p>
                 <p class="presta-desc">Lever les tensions, fluidifier la communication, installer la confiance qui fait avancer le collectif.</p>
                 <div class="presta-cardfoot">
-                  <span class="presta-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="presta-rule" aria-hidden="true"></span>
                   <p class="presta-tags">Écoute · Confiance · Performance</p>
                 </div>
               </a>
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>Séminaires &amp; conventions</h3>
+                <p class="presta-aka" aria-hidden="true"></p>
                 <p class="presta-desc">Vos temps forts d'entreprise orchestrés de bout en bout, sans fausse note.</p>
                 <div class="presta-cardfoot">
-                  <span class="presta-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="presta-rule" aria-hidden="true"></span>
                   <p class="presta-tags">Logistique · Sur-mesure · Clé en main</p>
                 </div>
               </a>
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>RSE / ESG</h3>
+                <p class="presta-aka" aria-hidden="true"></p>
                 <p class="presta-desc">Des ateliers à impact pour fédérer vos équipes autour de valeurs concrètes et durables.</p>
                 <div class="presta-cardfoot">
-                  <span class="presta-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="presta-rule" aria-hidden="true"></span>
                   <p class="presta-tags">Engagement · Impact · Durable</p>
                 </div>
               </a>
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
                 <h3>Soirées d'entreprise</h3>
+                <p class="presta-aka" aria-hidden="true"></p>
                 <p class="presta-desc">Des moments fédérateurs pour célébrer, récompenser et resserrer les liens.</p>
                 <div class="presta-cardfoot">
-                  <span class="presta-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="presta-rule" aria-hidden="true"></span>
                   <p class="presta-tags">Convivialité · Célébration · Lien</p>
                 </div>
+              </a>
+              <a class="presta-card presta-cta" role="listitem" href="contact.html" aria-label="Contactez-nous pour programmer votre prochain évènement">
+                <span class="pc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <h3 class="pc-title">Programmons votre prochain évènement.</h3>
+                <p class="pc-text">On le conçoit, on l'organise et on l'anime, de A à Z.</p>
+                <span class="pc-cta">Contactez-nous <span class="pc-arrow" aria-hidden="true">&rarr;</span></span>
               </a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container presta-foot">
-        <a class="btn btn-ghost" href="nos-prestations.html">Voir toutes nos prestations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </section>
 
