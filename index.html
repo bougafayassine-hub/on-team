@@ -90,7 +90,7 @@
     transition:transform .3s cubic-bezier(.22,1,.36,1),opacity .2s}
 
   /* ===== overlay mobile ===== */
-  .nav-overlay{position:fixed;inset:0;z-index:90;
+  .nav-overlay{position:fixed;top:0;left:0;width:100%;height:100vh;height:100dvh;z-index:90;
     background:linear-gradient(165deg,var(--green-900),var(--green-800) 70%);
     padding:calc(var(--nav-h) + 1.4rem) 0 2rem;
     display:flex;flex-direction:column;
@@ -516,7 +516,7 @@
     .cta-btn:hover{background:#EFC480;transform:translateY(-2px);box-shadow:0 16px 34px -16px rgba(176,125,46,.7)}
     .cta-btn:hover svg{transform:translateX(4px)}
     .cta-note{font-size:.78rem;letter-spacing:.03em;color:rgba(247,244,237,.6)}
-    @media(max-width:760px){.cta-inner{flex-direction:column;align-items:flex-start}.cta-act{align-items:flex-start}}
+    @media(max-width:760px){.cta-inner{flex-direction:column;align-items:flex-start}.cta-copy{flex-direction:column;align-items:flex-start;gap:.85rem}.cta-act{align-items:flex-start}}
     /* ===================== GALERIE ===================== */
     .gallery{position:relative;overflow:hidden;background:radial-gradient(70% 90% at 50% 0%,rgba(214,161,86,.10),transparent 60%),var(--white);padding-block:clamp(2.6rem,5vw,4.4rem)}
     .gallery-head{text-align:center;max-width:54ch;margin:0 auto clamp(1.6rem,3.4vw,2.4rem)}
@@ -572,7 +572,7 @@
         <a href="index.html#prestations"><span class="idx">03</span>Nos prestations</a>
         <a href="contact.html"><span class="idx">04</span>Contact</a>
       </nav>
-      <a class="nav-ov-cta" href="contact.html">Demander un devis →</a>
+      <a class="nav-ov-cta" href="contact.html">Demander un devis</a>
       <div class="nav-ov-foot">
         <div class="nav-ov-contact">
           <a href="tel:+212661586548"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+212 661 58 65 48</a>
