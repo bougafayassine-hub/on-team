@@ -273,7 +273,8 @@
       .slide:nth-child(1){opacity:1!important}
       .slide:nth-child(n+2){opacity:0!important}
     }
-    .h-badge .hl{color:var(--gold-400);font-weight:700;letter-spacing:.1em}
+    .h-badge .hl{color:var(--gold-400);font-weight:700;letter-spacing:.1em;white-space:nowrap}
+    @media (max-width:600px){.h-badge{align-self:flex-start;white-space:nowrap;font-size:.62rem;letter-spacing:.07em;padding:.5rem .95rem}.h-badge .badge-rest{display:none}}
 
     /* ===== Sous-titre : apparition mot à mot, focus-pull premium ===== */
     .reveal-words{--lw-blur:9px}
@@ -600,7 +601,7 @@
       </div>
       <span class="grain" aria-hidden="true"></span>
       <div class="container hero2-inner">
-        <p class="h-badge anim-badge"><span class="dot" aria-hidden="true"></span><span class="hl">Agence n°1</span> de team building et d'évènements d'entreprise<span class="badge-sheen" aria-hidden="true"></span></p>
+        <p class="h-badge anim-badge"><span class="dot" aria-hidden="true"></span><span class="hl">Agence n°1</span><span class="badge-txt"> de team building<span class="badge-rest"> et d'évènements d'entreprise</span></span><span class="badge-sheen" aria-hidden="true"></span></p>
         <h1 class="hero-title weld" id="hero-heading"><span class="w w-l">Des expériences qui&nbsp;</span><span class="w w-key"><em>soudent</em><i class="seam" aria-hidden="true"></i><i class="flash" aria-hidden="true"></i></span><span class="w w-r">&nbsp;vos équipes.</span></h1>
         <div class="hero-lede">
           <p class="hero-lede-sub reveal-words"><span class="lw">Team</span> <span class="lw">buildings,</span> <span class="lw">séminaires,</span> <span class="lw">coaching</span> <span class="lw">d'équipe</span> <span class="lw">&amp;</span> <span class="lw">événements</span> <span class="lw">d'entreprise,</span> <span class="lw">conçus</span> <span class="lw">sur-mesure</span> <span class="lw">pour</span> <span class="lw">créer</span> <span class="lw">des</span> <span class="lw">liens</span> <span class="lw">durables.</span></p>
