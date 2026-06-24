@@ -208,9 +208,6 @@
       -webkit-mask:linear-gradient(90deg,#000,#000 52%,transparent 82%);mask:linear-gradient(90deg,#000,#000 52%,transparent 82%);
       animation:beamSweep 8s ease-in-out infinite}
     @keyframes beamSweep{0%{transform:translateY(-50%) rotate(-20deg)}50%{transform:translateY(-50%) rotate(15deg)}100%{transform:translateY(-50%) rotate(-20deg)}}
-    .adn-lh{position:absolute;left:-7%;top:-9%;width:clamp(50px,7vw,80px);height:auto;color:var(--gold-400);z-index:4;pointer-events:none;filter:drop-shadow(0 0 18px rgba(242,200,121,.55))}
-    .adn-lh .lamp{transform-origin:center;animation:lampPulse 8s ease-in-out infinite}
-    @keyframes lampPulse{0%,100%{opacity:.45}10%{opacity:1}30%{opacity:.5}}
     .adn-grid{position:relative;z-index:1;display:grid;grid-template-columns:.82fr 1.18fr;align-items:center;gap:clamp(2rem,5vw,4.6rem)}
     .adn-copy{position:relative;z-index:1;max-width:56ch}
     .adn h2{color:var(--cream);font-family:var(--font-display);font-weight:500;font-size:clamp(2rem,1.4rem + 2.5vw,3.25rem);line-height:1.08;letter-spacing:-.018em}
@@ -232,8 +229,6 @@
     .adn-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 42%,rgba(10,31,21,.55));pointer-events:none}
     .adn-photo-1{inset:0 27% 16% 0;animation:floatY 9s ease-in-out infinite}
     .adn-photo-2{right:0;bottom:0;width:52%;aspect-ratio:3/4;border-color:rgba(242,200,121,.92);z-index:2;animation:floatY 8s ease-in-out .5s infinite reverse}
-    .adn-vlabel{position:absolute;right:-1.1rem;top:46%;transform:translateY(-50%) rotate(90deg);transform-origin:center;font-size:.66rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-400);white-space:nowrap;z-index:4}
-
     /* ===================== VALEURS — grille 2x2 ===================== */
     .valeurs{background:var(--cream);padding-block:clamp(2.1rem,3.8vw,3.2rem)}
     .valeurs-head{max-width:46ch;margin:0 auto clamp(1.2rem,2.4vw,1.8rem);text-align:center}
@@ -384,7 +379,6 @@
     @media (max-width:680px){
       .val-grid{grid-template-columns:1fr}
       .pin-label{font-size:13px}
-      .adn-lh{width:46px;left:-4%}
     }
     @media (max-width:560px){
       .qm-badge{left:1rem;right:auto;bottom:-1rem;padding:.55rem .75rem}
@@ -432,14 +426,14 @@
     .cta-ico svg{width:25px;height:25px}
     .cta-copy h2{font-family:var(--font-display);font-weight:500;font-size:clamp(1.35rem,1.05rem + 1.2vw,2rem);line-height:1.1;letter-spacing:-.015em;color:var(--cream);margin:0}
     .cta-copy h2 em{font-style:italic;color:var(--gold-400)}
-    .cta-act{display:flex;flex-direction:column;align-items:flex-start;gap:.55rem;flex:0 0 auto}
+    .cta-act{display:flex;flex-direction:column;align-items:center;gap:.55rem;flex:0 0 auto}
     .cta-sub{margin-top:.55rem;font-size:.95rem;line-height:1.5;color:rgba(247,244,237,.78);max-width:48ch}
     .cta-btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--gold-400);color:var(--green-900);font-family:var(--font-body);font-weight:700;font-size:.96rem;padding:.85rem 1.6rem;border-radius:999px;transition:transform .25s,box-shadow .25s,background .25s}
     .cta-btn svg{width:1.05em;height:1.05em;transition:transform .25s}
     .cta-btn:hover{background:#EFC480;transform:translateY(-2px);box-shadow:0 16px 34px -16px rgba(176,125,46,.7)}
     .cta-btn:hover svg{transform:translateX(4px)}
     .cta-note{font-size:.78rem;letter-spacing:.03em;color:rgba(247,244,237,.6)}
-    @media(max-width:760px){.cta-inner{flex-direction:column;align-items:flex-start}.cta-copy{flex-direction:column;align-items:flex-start;gap:.85rem}.cta-act{align-items:flex-start}}
+    @media(max-width:760px){.cta-inner{flex-direction:column;align-items:flex-start;gap:1.2rem;padding:clamp(1.5rem,5vw,1.95rem)}.cta-copy{flex-direction:column;align-items:flex-start;gap:.8rem;flex:0 0 auto}.cta-act{align-self:center}}
     /* ===================== CARTE MAROC RÉALISTE (hero) ===================== */
     .mm-land{fill:url(#mm-land-g);stroke:rgba(242,200,121,.5);stroke-width:1.3;stroke-linejoin:round;filter:drop-shadow(0 0 10px rgba(242,200,121,.12))}
     .mm-links{}
@@ -521,8 +515,8 @@
       <div class="container qhero-inner">
         <div class="qhero-copy">
           <p class="eyebrow">Qui sommes-nous</p>
-          <h1 id="q-h1"><span class="hl-a">Votre agence de</span><span class="hl-mid"><span class="hl-key">team building</span></span><span class="hl-c">au Maroc, <span class="nb">depuis 20 ans</span></span></h1>
-          <p class="qhero-sub">Tout est conçu, organisé et animé par nos soins. Pas de sous-traitance&nbsp;: vos collaborateurs arrivent en groupe et repartent en <strong>équipe</strong>.</p>
+          <h1 id="q-h1"><span class="hl-a">Votre agence de</span><span class="hl-mid"><span class="hl-key">team building</span> au Maroc,</span><span class="hl-c">depuis 20 ans.</span></h1>
+          <p class="qhero-sub">Tout est conçu, organisé et animé par nos soins. Pas de sous-traitance&nbsp;: vos collaborateurs arrivent <em>en groupe</em> et repartent en <strong>équipe</strong>.</p>
         </div>
 
         <div class="qhero-media">
@@ -587,14 +581,6 @@
       <div class="container adn-grid">
         <div class="adn-media">
           <span class="adn-ring" aria-hidden="true"></span>
-          <svg class="adn-lh" viewBox="0 0 64 70" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M25 26h14l3.5 38h-21z"/>
-            <path d="M23 38h18M22 50h20"/>
-            <rect x="27" y="15" width="10" height="11" rx="1.5"/>
-            <path d="M29 15v-4h6v4M32 7V4"/>
-            <g class="lamp"><path d="M27 20.5 12 15M37 20.5 52 15M32 13V6"/></g>
-          </svg>
-          <span class="adn-vlabel" aria-hidden="true">Notre ADN · depuis 2004</span>
           <figure class="adn-photo adn-photo-1"><img src="assets/images/seminaire-salle.jpg" alt="Séminaire d'entreprise animé par ON TEAM Evolution" loading="lazy" width="640" height="800"></figure>
           <figure class="adn-photo adn-photo-2"><img src="assets/images/paintball.jpg" alt="Activité de cohésion d'équipe en extérieur" loading="lazy" width="420" height="560"></figure>
         </div>

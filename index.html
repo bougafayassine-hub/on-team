@@ -348,7 +348,7 @@
     .promise-plus{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--white);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:1.55rem;line-height:1;color:var(--gold-ink);box-shadow:0 8px 22px -10px rgba(14,38,28,.35);z-index:2;animation:plusPulse 2.4s ease-in-out infinite}
     @keyframes plusPulse{0%,100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 8px 22px -10px rgba(14,38,28,.35),0 0 0 0 rgba(176,125,46,.5)}50%{transform:translate(-50%,-50%) scale(1.09);box-shadow:0 8px 22px -10px rgba(14,38,28,.35),0 0 0 13px rgba(176,125,46,0)}}
     @media (max-width:720px){
-      .promise-pair{grid-template-columns:1fr;gap:.6rem}.promise-plus{position:static;justify-self:center;margin:-1.2rem 0;transform:none}
+      .promise-pair{grid-template-columns:1fr;gap:2.6rem}
     }
     /* Le + est présent et bat en continu ; puis carte 1 PUIS carte 2 au scroll */
     .promise.reveal-ready .promise-card{opacity:0;transform:translateY(24px)}
@@ -400,7 +400,7 @@
     /* carte coup de cœur (distincte des prestations classiques) */
     .presta-feature{background:radial-gradient(120% 100% at 100% 0,rgba(214,161,86,.16),transparent 55%),linear-gradient(160deg,#10301F,var(--green-900));border:1px solid var(--gold-500);color:var(--cream)}
     .presta-feature:hover{border-color:var(--gold-400);box-shadow:0 18px 42px -20px rgba(0,0,0,.6)}
-    .pf-tag{align-self:flex-start;font-family:var(--font-body);font-weight:700;font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--green-900);background:linear-gradient(135deg,var(--gold-400),var(--gold-ink));padding:.34em .7em;border-radius:999px;margin-bottom:.9rem}
+    .pf-tag{align-self:flex-start;font-family:var(--font-body);font-weight:700;font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--green-900);background:linear-gradient(135deg,var(--gold-400),var(--gold-ink));padding:.34em .7em;border-radius:999px;margin-bottom:clamp(1.95rem,3vw,2.55rem)}
     .presta-feature .pf-title{font-family:var(--font-display);font-weight:500;font-size:clamp(1.3rem,1.1rem + .6vw,1.6rem);letter-spacing:-.01em;color:var(--cream);min-height:0;margin-bottom:.45rem}
     .pf-hook{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:1.1rem;line-height:1.3;color:var(--gold-400)}
     .pf-sub{margin-top:.3rem;font-size:.86rem;line-height:1.45;color:rgba(247,244,237,.62)}
@@ -517,14 +517,14 @@
     .cta-ico svg{width:25px;height:25px}
     .cta-copy h2{font-family:var(--font-display);font-weight:500;font-size:clamp(1.35rem,1.05rem + 1.2vw,2rem);line-height:1.1;letter-spacing:-.015em;color:var(--cream);margin:0}
     .cta-copy h2 em{font-style:italic;color:var(--gold-400)}
-    .cta-act{display:flex;flex-direction:column;align-items:flex-start;gap:.55rem;flex:0 0 auto}
+    .cta-act{display:flex;flex-direction:column;align-items:center;gap:.55rem;flex:0 0 auto}
     .cta-sub{margin-top:.55rem;font-size:.95rem;line-height:1.5;color:rgba(247,244,237,.78);max-width:48ch}
     .cta-btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--gold-400);color:var(--green-900);font-family:var(--font-body);font-weight:700;font-size:.96rem;padding:.9rem 1.7rem;border-radius:999px;box-shadow:0 12px 28px -14px rgba(176,125,46,.6);transition:transform .25s,box-shadow .25s,background .25s}
     .cta-btn svg{width:1.05em;height:1.05em;transition:transform .25s}
     .cta-btn:hover{background:#EFC480;transform:translateY(-2px);box-shadow:0 16px 34px -16px rgba(176,125,46,.7)}
     .cta-btn:hover svg{transform:translateX(4px)}
     .cta-note{font-size:.78rem;letter-spacing:.03em;color:rgba(247,244,237,.6)}
-    @media(max-width:760px){.cta-inner{flex-direction:column;align-items:flex-start;gap:1.2rem;padding:clamp(1.5rem,5vw,1.95rem)}.cta-copy{flex-direction:column;align-items:flex-start;gap:.8rem;flex:0 0 auto}.cta-act{align-items:flex-start}}
+    @media(max-width:760px){.cta-inner{flex-direction:column;align-items:flex-start;gap:1.2rem;padding:clamp(1.5rem,5vw,1.95rem)}.cta-copy{flex-direction:column;align-items:flex-start;gap:.8rem;flex:0 0 auto}.cta-act{align-self:center}}
     /* ===================== GALERIE ===================== */
     .gallery{position:relative;overflow:hidden;background:radial-gradient(70% 90% at 50% 0%,rgba(214,161,86,.10),transparent 60%),var(--white);padding-block:clamp(2.6rem,5vw,4.4rem)}
     .gallery-head{text-align:center;max-width:54ch;margin:0 auto clamp(1.6rem,3.4vw,2.4rem)}
@@ -709,9 +709,7 @@
               </a>
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
-                <h3>Coaching d'équipe</h3>
-                <p class="presta-aka" aria-hidden="true"></p>
-                <p class="presta-desc">Lever les tensions, fluidifier la communication, installer la confiance qui fait avancer le collectif.</p>
+                <h3>Coaching d'équipe</h3>                <p class="presta-desc">Lever les tensions, fluidifier la communication, installer la confiance qui fait avancer le collectif.</p>
                 <div class="presta-cardfoot">
                   <span class="presta-rule" aria-hidden="true"></span>
                   <p class="presta-tags">Écoute · Confiance · Performance</p>
@@ -719,9 +717,7 @@
               </a>
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
-                <h3>Séminaires &amp; conventions</h3>
-                <p class="presta-aka" aria-hidden="true"></p>
-                <p class="presta-desc">Vos temps forts d'entreprise orchestrés de bout en bout, sans fausse note.</p>
+                <h3>Séminaires &amp; conventions</h3>                <p class="presta-desc">Vos temps forts d'entreprise orchestrés de bout en bout, sans fausse note.</p>
                 <div class="presta-cardfoot">
                   <span class="presta-rule" aria-hidden="true"></span>
                   <p class="presta-tags">Logistique · Sur-mesure · Clé en main</p>
@@ -729,9 +725,7 @@
               </a>
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
-                <h3>RSE / ESG</h3>
-                <p class="presta-aka" aria-hidden="true"></p>
-                <p class="presta-desc">Des ateliers à impact pour fédérer vos équipes autour de valeurs concrètes et durables.</p>
+                <h3>RSE / ESG</h3>                <p class="presta-desc">Des ateliers à impact pour fédérer vos équipes autour de valeurs concrètes et durables.</p>
                 <div class="presta-cardfoot">
                   <span class="presta-rule" aria-hidden="true"></span>
                   <p class="presta-tags">Engagement · Impact · Durable</p>
@@ -739,9 +733,7 @@
               </a>
               <a class="presta-card" role="listitem" href="nos-prestations.html">
                 <span class="mk" aria-hidden="true"></span>
-                <h3>Soirées d'entreprise</h3>
-                <p class="presta-aka" aria-hidden="true"></p>
-                <p class="presta-desc">Des moments fédérateurs pour célébrer, récompenser et resserrer les liens.</p>
+                <h3>Soirées d'entreprise</h3>                <p class="presta-desc">Des moments fédérateurs pour célébrer, récompenser et resserrer les liens.</p>
                 <div class="presta-cardfoot">
                   <span class="presta-rule" aria-hidden="true"></span>
                   <p class="presta-tags">Convivialité · Célébration · Lien</p>
